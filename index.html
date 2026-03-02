@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arth Atelier — Contemporary, Artisanal & Handcrafted Fashion</title>
+  <meta name="description" content="Arth Atelier is a Boston-based ready-to-wear brand blending artisanal craftsmanship with contemporary design. Designed in New England, handcrafted in India.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- NAVIGATION — hides on scroll down, reveals on scroll up -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">ARTH ATELIER</a>
+      <ul class="nav__links">
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#craft">Our Story</a></li>
+        <li><a href="#sustainability">Traceability</a></li>
+        <li><a href="#custom">Custom Orders</a></li>
+      </ul>
+      <div class="nav__actions">
+        <button class="nav__search" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/>
+          </svg>
+        </button>
+        <button class="nav__cart" aria-label="Cart">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="nav__cart-count">0</span>
+        </button>
+        <button class="nav__menu-toggle" aria-label="Menu" id="menuToggle">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-menu__links">
+      <li><a href="#collection">Collection</a></li>
+      <li><a href="#craft">Our Story</a></li>
+      <li><a href="#sustainability">Traceability</a></li>
+      <li><a href="#custom">Custom Orders</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- VIDEO HERO — full viewport with gradient overlay -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero__video-wrap">
+      <!-- Replace src with your actual video URL from Shopify/CDN -->
+      <video class="hero__video" autoplay muted loop playsinline poster="assets/hero-poster.jpg">
+        <source src="assets/hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero__gradient"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Designed in New England · Handcrafted in India</p>
+      <h1 class="hero__title">Where Heritage<br>Meets Contemporary Craft</h1>
+      <a href="#collection" class="hero__cta">Explore the Collection</a>
+    </div>
+    <div class="hero__scroll-indicator" id="scrollIndicator">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- MARQUEE — infinite scrolling brand values -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <div class="marquee">
+    <div class="marquee__track">
+      <span class="marquee__content">
+        Hand-Embroidered &nbsp;&#x2022;&nbsp; Traceable &nbsp;&#x2022;&nbsp; Organic &nbsp;&#x2022;&nbsp; Artisanal &nbsp;&#x2022;&nbsp; Heritage Craft &nbsp;&#x2022;&nbsp; Sustainable &nbsp;&#x2022;&nbsp; Made in India &nbsp;&#x2022;&nbsp; Hand-Embroidered &nbsp;&#x2022;&nbsp; Traceable &nbsp;&#x2022;&nbsp; Organic &nbsp;&#x2022;&nbsp; Artisanal &nbsp;&#x2022;&nbsp; Heritage Craft &nbsp;&#x2022;&nbsp; Sustainable &nbsp;&#x2022;&nbsp; Made in India &nbsp;&#x2022;&nbsp;
+      </span>
+      <span class="marquee__content" aria-hidden="true">
+        Hand-Embroidered &nbsp;&#x2022;&nbsp; Traceable &nbsp;&#x2022;&nbsp; Organic &nbsp;&#x2022;&nbsp; Artisanal &nbsp;&#x2022;&nbsp; Heritage Craft &nbsp;&#x2022;&nbsp; Sustainable &nbsp;&#x2022;&nbsp; Made in India &nbsp;&#x2022;&nbsp; Hand-Embroidered &nbsp;&#x2022;&nbsp; Traceable &nbsp;&#x2022;&nbsp; Organic &nbsp;&#x2022;&nbsp; Artisanal &nbsp;&#x2022;&nbsp; Heritage Craft &nbsp;&#x2022;&nbsp; Sustainable &nbsp;&#x2022;&nbsp; Made in India &nbsp;&#x2022;&nbsp;
+      </span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- COLLECTION — product grid with hover interactions -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="collection" id="collection">
+    <div class="collection__header reveal">
+      <p class="section-eyebrow">The Collection</p>
+      <h2 class="section-title">Pieces That Carry Meaning</h2>
+      <p class="section-subtitle">Each garment is a dialogue between centuries-old craft and contemporary design — hand-finished by artisans whose families have practiced these techniques for generations.</p>
+    </div>
+
+    <div class="collection__grid">
+
+      <article class="product-card reveal" data-product="1">
+        <div class="product-card__image-wrap">
+          <div class="product-card__image" style="background: linear-gradient(145deg, #2c2420, #4a3f38);">
+            <div class="product-card__image-inner">
+              <span class="product-card__placeholder-text">Blazer Luxe</span>
+            </div>
+          </div>
+          <div class="product-card__quick-add">
+            <span class="product-card__quick-add-label">Quick Add</span>
+            <div class="product-card__sizes">
+              <button class="size-btn">XS</button>
+              <button class="size-btn">S</button>
+              <button class="size-btn">M</button>
+              <button class="size-btn">L</button>
+              <button class="size-btn">XL</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card__info">
+          <h3 class="product-card__name">Hand-Embroidered Wool Blazer Luxe</h3>
+          <p class="product-card__price">$1,295</p>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-product="2">
+        <div class="product-card__image-wrap">
+          <div class="product-card__image" style="background: linear-gradient(145deg, #3a352e, #5c5449);">
+            <div class="product-card__image-inner">
+              <span class="product-card__placeholder-text">Trousers Luxe</span>
+            </div>
+          </div>
+          <div class="product-card__quick-add">
+            <span class="product-card__quick-add-label">Quick Add</span>
+            <div class="product-card__sizes">
+              <button class="size-btn">XS</button>
+              <button class="size-btn">S</button>
+              <button class="size-btn">M</button>
+              <button class="size-btn">L</button>
+              <button class="size-btn">XL</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card__info">
+          <h3 class="product-card__name">Straight-Leg Organic Wool Trousers Luxe</h3>
+          <p class="product-card__price">$695</p>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-product="3">
+        <div class="product-card__image-wrap">
+          <div class="product-card__image" style="background: linear-gradient(145deg, #f5f0e8, #e8dfd3);">
+            <div class="product-card__image-inner">
+              <span class="product-card__placeholder-text" style="color: #2c2420;">Poplin Shirt</span>
+            </div>
+          </div>
+          <div class="product-card__quick-add">
+            <span class="product-card__quick-add-label">Quick Add</span>
+            <div class="product-card__sizes">
+              <button class="size-btn">XS</button>
+              <button class="size-btn">S</button>
+              <button class="size-btn">M</button>
+              <button class="size-btn">L</button>
+              <button class="size-btn">XL</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card__info">
+          <h3 class="product-card__name">Asymmetric Organic Cotton Poplin Shirt</h3>
+          <p class="product-card__price">$495</p>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-product="4">
+        <div class="product-card__image-wrap">
+          <div class="product-card__image" style="background: linear-gradient(145deg, #1e1c1a, #3b3632);">
+            <div class="product-card__image-inner">
+              <span class="product-card__placeholder-text">Wool Cardigan</span>
+            </div>
+          </div>
+          <div class="product-card__quick-add">
+            <span class="product-card__quick-add-label">Quick Add</span>
+            <div class="product-card__sizes">
+              <button class="size-btn">XS</button>
+              <button class="size-btn">S</button>
+              <button class="size-btn">M</button>
+              <button class="size-btn">L</button>
+              <button class="size-btn">XL</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card__info">
+          <h3 class="product-card__name">Hand-Embroidered Wool Cardigan</h3>
+          <p class="product-card__price">$895</p>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-product="5">
+        <div class="product-card__image-wrap">
+          <div class="product-card__image" style="background: linear-gradient(145deg, #d4c8b8, #bfb3a1);">
+            <div class="product-card__image-inner">
+              <span class="product-card__placeholder-text" style="color: #2c2420;">Resort Shirt</span>
+            </div>
+          </div>
+          <div class="product-card__quick-add">
+            <span class="product-card__quick-add-label">Quick Add</span>
+            <div class="product-card__sizes">
+              <button class="size-btn">XS</button>
+              <button class="size-btn">S</button>
+              <button class="size-btn">M</button>
+              <button class="size-btn">L</button>
+              <button class="size-btn">XL</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card__info">
+          <h3 class="product-card__name">Heritage Print Resort Shirt</h3>
+          <p class="product-card__price">$395</p>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-product="6">
+        <div class="product-card__image-wrap">
+          <div class="product-card__image" style="background: linear-gradient(145deg, #4a4540, #2e2a26);">
+            <div class="product-card__image-inner">
+              <span class="product-card__placeholder-text">Wool Trousers</span>
+            </div>
+          </div>
+          <div class="product-card__quick-add">
+            <span class="product-card__quick-add-label">Quick Add</span>
+            <div class="product-card__sizes">
+              <button class="size-btn">XS</button>
+              <button class="size-btn">S</button>
+              <button class="size-btn">M</button>
+              <button class="size-btn">L</button>
+              <button class="size-btn">XL</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card__info">
+          <h3 class="product-card__name">Straight-Leg Organic Wool Trousers</h3>
+          <p class="product-card__price">$595</p>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="collection__cta reveal">
+      <a href="https://arth.shop/collections/shop-all" class="btn btn--outline">View All Pieces</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- EDITORIAL 1 — Craft & Heritage -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="editorial" id="craft">
+    <div class="editorial__inner editorial__inner--image-left">
+      <div class="editorial__image reveal reveal--slide-right">
+        <div class="editorial__image-frame" style="background: linear-gradient(160deg, #3a2f28, #6b5d50);">
+          <span class="editorial__image-placeholder">Artisan at work — Aari embroidery detail</span>
+        </div>
+      </div>
+      <div class="editorial__text reveal reveal--slide-left">
+        <p class="section-eyebrow">Craft & Heritage</p>
+        <h2 class="editorial__title">23 Hours of Handwork<br>in Every Lapel</h2>
+        <p class="editorial__body">Our artisans are fifth and sixth-generation masters of Aari embroidery and Chikankari — techniques that have been passed down through families for centuries across the communities of India. Each stitch carries the weight of cultural memory.</p>
+        <p class="editorial__body">At Arth Atelier, we don't just preserve these traditions. We place them at the center of contemporary fashion, creating pieces where heritage becomes a living, wearable thing.</p>
+        <a href="https://arth.shop/pages/our-story" class="btn btn--text">Read Our Story &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- FULL-WIDTH IMAGE BREAK -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="image-break reveal">
+    <div class="image-break__inner" style="background: linear-gradient(135deg, #2c2420, #4a3f38, #6b5d50);">
+      <blockquote class="image-break__quote">
+        <p>"A dialogue between cultural expressions — where the precision of Western tailoring meets the soul and beauty of Eastern craft."</p>
+        <cite>— Tamanna Mullen, Founder</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- EDITORIAL 2 — Sustainability & Traceability -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="editorial" id="sustainability">
+    <div class="editorial__inner editorial__inner--image-right">
+      <div class="editorial__text reveal reveal--slide-right">
+        <p class="section-eyebrow">Traceability</p>
+        <h2 class="editorial__title">From Farm to Fiber<br>to Your Wardrobe</h2>
+        <p class="editorial__body">Every Arth Atelier garment comes with a QR code that traces its journey — from the farm where the fiber was harvested, to the spinning, weaving, dyeing, and hand-finishing. Complete transparency, no exceptions.</p>
+        <p class="editorial__body">We work exclusively with natural, organic, and recycled materials: traceable organic wool, peace silk, Lyocell, and upcycled deadstock fabrics. Our supply chain is short, sustainable, and intentional.</p>
+        <a href="https://arth.shop/pages/traceability" class="btn btn--text">Discover Our Process &rarr;</a>
+      </div>
+      <div class="editorial__image reveal reveal--slide-left">
+        <div class="editorial__image-frame" style="background: linear-gradient(160deg, #e8dfd3, #c4b9a8);">
+          <span class="editorial__image-placeholder" style="color: #2c2420;">Traceability journey — QR code on garment</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- THREE PILLARS -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="pillars">
+    <div class="pillars__inner">
+      <div class="pillar reveal">
+        <span class="pillar__number">01</span>
+        <h3 class="pillar__title">The Art</h3>
+        <p class="pillar__text">Contemporary silhouettes that honor the dialogue between East and West — minimal, considered, timeless.</p>
+      </div>
+      <div class="pillar reveal">
+        <span class="pillar__number">02</span>
+        <h3 class="pillar__title">The Craft</h3>
+        <p class="pillar__text">Centuries-old techniques — Aari embroidery, Chikankari, hand-weaving — performed by multi-generational artisan families.</p>
+      </div>
+      <div class="pillar reveal">
+        <span class="pillar__number">03</span>
+        <h3 class="pillar__title">The Impact</h3>
+        <p class="pillar__text">A traceable, sustainable supply chain that puts artisan welfare and environmental responsibility first.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- CUSTOM ORDERS -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="custom" id="custom">
+    <div class="custom__inner reveal">
+      <p class="section-eyebrow">Made for You</p>
+      <h2 class="section-title">Custom & Made-to-Order</h2>
+      <p class="custom__body">We honor individuality through master craftsmanship. Whether you need tall sizing for frames over 6'0" or a fully bespoke, one-of-a-kind piece — our atelier is at your service.</p>
+      <a href="mailto:info@arth.shop" class="btn btn--primary">Inquire Now</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- NEWSLETTER -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="newsletter reveal">
+    <div class="newsletter__inner">
+      <h2 class="newsletter__title">Join the Atelier</h2>
+      <p class="newsletter__text">Be the first to know about new collections, artisan stories, and exclusive access.</p>
+      <form class="newsletter__form" action="#" method="post">
+        <input type="email" class="newsletter__input" placeholder="Your email address" required>
+        <button type="submit" class="newsletter__submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- FOOTER -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="/" class="footer__logo">ARTH ATELIER</a>
+        <p class="footer__tagline">Contemporary, Artisanal &<br>Handcrafted Fashion</p>
+        <p class="footer__origin">Designed in New England<br>Handcrafted in India</p>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__heading">Shop</h4>
+        <ul>
+          <li><a href="https://arth.shop/collections/shop-all">All Pieces</a></li>
+          <li><a href="https://arth.shop/collections">Collections</a></li>
+          <li><a href="https://arth.shop/pages/custom-orders">Custom Orders</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__heading">About</h4>
+        <ul>
+          <li><a href="https://arth.shop/pages/our-story">Our Story</a></li>
+          <li><a href="https://arth.shop/pages/traceability">Traceability</a></li>
+          <li><a href="mailto:info@arth.shop">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__heading">Connect</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/arthatelier/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="mailto:info@arth.shop">info@arth.shop</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2026 Arth Atelier. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
