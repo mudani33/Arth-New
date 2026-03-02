@@ -583,7 +583,15 @@ input {
 .product-card__image {
   width: 100%;
   height: 100%;
+  background: var(--color-surface);
   transition: transform var(--duration-slow) var(--ease-smooth);
+}
+
+.product-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .product-card__image-inner {
@@ -1266,10 +1274,8 @@ input {
 
       <article class="product-card reveal" data-product="1">
         <div class="product-card__image-wrap">
-          <div class="product-card__image" style="background: linear-gradient(145deg, #2c2420, #4a3f38);">
-            <div class="product-card__image-inner">
-              <span class="product-card__placeholder-text">Blazer Luxe</span>
-            </div>
+          <div class="product-card__image">
+            <img src="https://cdn.shopify.com/s/files/1/0581/8882/4670/files/ArthAtelier_Laydown_Embroidered_LuxeBlazer_033-New.webp?v=1772471045" alt="Hand-Embroidered Wool Blazer Luxe" loading="lazy">
           </div>
           <div class="product-card__quick-add">
             <span class="product-card__quick-add-label">Quick Add</span>
@@ -1290,10 +1296,8 @@ input {
 
       <article class="product-card reveal" data-product="2">
         <div class="product-card__image-wrap">
-          <div class="product-card__image" style="background: linear-gradient(145deg, #3a352e, #5c5449);">
-            <div class="product-card__image-inner">
-              <span class="product-card__placeholder-text">Trousers Luxe</span>
-            </div>
+          <div class="product-card__image">
+            <img src="https://cdn.shopify.com/s/files/1/0581/8882/4670/files/ArthAtelier_Laydown_Embroidered_LuxeTrousers_061-New.webp?v=1772471587" alt="Straight-Leg Organic Wool Trousers Luxe" loading="lazy">
           </div>
           <div class="product-card__quick-add">
             <span class="product-card__quick-add-label">Quick Add</span>
@@ -1314,10 +1318,8 @@ input {
 
       <article class="product-card reveal" data-product="3">
         <div class="product-card__image-wrap">
-          <div class="product-card__image" style="background: linear-gradient(145deg, #f5f0e8, #e8dfd3);">
-            <div class="product-card__image-inner">
-              <span class="product-card__placeholder-text" style="color: #2c2420;">Poplin Shirt</span>
-            </div>
+          <div class="product-card__image">
+            <img src="https://cdn.shopify.com/s/files/1/0581/8882/4670/files/ArthAtelier_Laydown_Embroidered_Blazer_044-New.webp?v=1772471024" alt="Asymmetric Organic Cotton Poplin Shirt" loading="lazy">
           </div>
           <div class="product-card__quick-add">
             <span class="product-card__quick-add-label">Quick Add</span>
@@ -1338,10 +1340,8 @@ input {
 
       <article class="product-card reveal" data-product="4">
         <div class="product-card__image-wrap">
-          <div class="product-card__image" style="background: linear-gradient(145deg, #1e1c1a, #3b3632);">
-            <div class="product-card__image-inner">
-              <span class="product-card__placeholder-text">Wool Cardigan</span>
-            </div>
+          <div class="product-card__image">
+            <img src="https://cdn.shopify.com/s/files/1/0581/8882/4670/files/ArthAtelier_Laydown_Embroidered_Cardigan_247-New.webp?v=1772471015" alt="Hand-Embroidered Wool Cardigan" loading="lazy">
           </div>
           <div class="product-card__quick-add">
             <span class="product-card__quick-add-label">Quick Add</span>
