@@ -504,18 +504,19 @@ input {
    ═══════════════════════════════════════════════════════════ */
 .press-bar {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2.5rem;
-  padding: 1.5rem var(--container-padding);
-  border-bottom: 1px solid var(--color-border);
+  gap: 1.25rem;
+  padding: 3.5rem var(--container-padding);
+  background: var(--color-bg-alt);
 }
 
 .press-bar__label {
   font-family: var(--font-body);
-  font-size: 0.6rem;
+  font-size: 0.65rem;
   font-weight: 400;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--color-text-muted);
   white-space: nowrap;
@@ -524,23 +525,31 @@ input {
 .press-bar__logos {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 0;
+}
+
+.press-bar__divider {
+  width: 1px;
+  height: 28px;
+  background: var(--color-border);
+  margin: 0 clamp(1.75rem, 3.5vw, 3.5rem);
+  flex-shrink: 0;
 }
 
 .press-bar__logo {
   color: var(--color-text);
-  opacity: 0.45;
+  opacity: 0.4;
   white-space: nowrap;
-  transition: opacity var(--duration-fast);
+  transition: opacity var(--duration-normal) var(--ease-smooth);
 }
 
 .press-bar__logo:hover {
-  opacity: 0.7;
+  opacity: 0.65;
 }
 
 .press-bar__logo--vogue {
   font-family: var(--font-display);
-  font-size: 1.3rem;
+  font-size: clamp(1.5rem, 2.5vw, 1.85rem);
   font-weight: 400;
   font-style: italic;
   letter-spacing: 0.02em;
@@ -548,16 +557,16 @@ input {
 
 .press-bar__logo--forbes {
   font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-size: clamp(1.6rem, 2.5vw, 1.95rem);
   font-weight: 600;
   letter-spacing: 0.01em;
 }
 
 .press-bar__logo--daily {
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: clamp(0.8rem, 1.2vw, 0.95rem);
   font-weight: 400;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 
@@ -1125,13 +1134,13 @@ input {
   }
 
   .press-bar {
-    flex-direction: column;
-    gap: 0.75rem;
-    padding: 1.25rem var(--container-padding);
+    padding: 2.5rem var(--container-padding);
+    gap: 1rem;
   }
 
-  .press-bar__logos {
-    gap: 1.75rem;
+  .press-bar__divider {
+    height: 22px;
+    margin: 0 1.25rem;
   }
 
   .collection__grid {
