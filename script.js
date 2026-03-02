@@ -211,7 +211,7 @@
     window.addEventListener('scroll', function () {
       if (window.scrollY < window.innerHeight) {
         var translateY = window.scrollY * 0.3;
-        heroVideo.style.transform = 'translateY(' + translateY + 'px) scale(1.05)';
+        heroVideo.style.transform = 'translateY(' + translateY + 'px)';
       }
     }, { passive: true });
   }

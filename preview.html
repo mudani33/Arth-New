@@ -396,12 +396,14 @@ input {
 .hero__video-wrap {
   position: absolute;
   inset: 0;
+  background: #0a0a0a;
 }
 
 .hero__video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
 }
 
 /* Gradient overlay — adds depth and ensures text readability */
@@ -1818,7 +1820,7 @@ input {
     window.addEventListener('scroll', function () {
       if (window.scrollY < window.innerHeight) {
         var translateY = window.scrollY * 0.3;
-        heroVideo.style.transform = 'translateY(' + translateY + 'px) scale(1.05)';
+        heroVideo.style.transform = 'translateY(' + translateY + 'px)';
       }
     }, { passive: true });
   }
