@@ -6,7 +6,7 @@
   <title>Arth Atelier — Preview</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 /* ═══════════════════════════════════════════════════════════
    ARTH ATELIER — Luxury Minimalist Stylesheet
@@ -511,14 +511,14 @@ input {
 
 
 /* ═══════════════════════════════════════════════════════════
-   PRESS BAR — As Featured In
+   PRESS BAR — As Seen In
    ═══════════════════════════════════════════════════════════ */
 .press-bar {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.25rem;
+  gap: 1.5rem;
   padding: 3.5rem var(--container-padding);
   background: var(--color-bg-alt);
 }
@@ -535,55 +535,37 @@ input {
 
 .press-bar__logos {
   display: flex;
-  align-items: baseline;
-  gap: 0;
-}
-
-.press-bar__divider {
-  width: 1px;
-  height: 24px;
-  background: var(--color-border);
-  margin: 0 clamp(2rem, 4vw, 4rem);
-  flex-shrink: 0;
-  align-self: center;
+  align-items: center;
+  gap: clamp(2.5rem, 5vw, 5rem);
 }
 
 .press-bar__logo {
+  display: inline-flex;
+  align-items: center;
   color: var(--color-text);
-  opacity: 0.35;
-  white-space: nowrap;
+  opacity: 0.4;
   transition: opacity var(--duration-normal) var(--ease-smooth);
 }
 
 .press-bar__logo:hover {
-  opacity: 0.6;
+  opacity: 0.65;
 }
 
-/* Vogue — italic serif wordmark */
-.press-bar__logo--vogue {
-  font-family: var(--font-display);
-  font-size: clamp(1.6rem, 2.8vw, 2rem);
-  font-weight: 400;
-  font-style: italic;
-  letter-spacing: 0.03em;
+.press-bar__svg {
+  display: block;
+  height: auto;
 }
 
-/* Forbes — bold condensed serif */
-.press-bar__logo--forbes {
-  font-family: var(--font-display);
-  font-size: clamp(1.6rem, 2.8vw, 2rem);
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  text-transform: uppercase;
+.press-bar__svg--vogue {
+  width: clamp(140px, 18vw, 220px);
 }
 
-/* The Daily — spaced uppercase sans */
-.press-bar__logo--daily {
-  font-family: var(--font-body);
-  font-size: clamp(0.75rem, 1.1vw, 0.85rem);
-  font-weight: 500;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
+.press-bar__svg--forbes {
+  width: clamp(90px, 10vw, 130px);
+}
+
+.press-bar__svg--daily {
+  width: clamp(75px, 8vw, 105px);
 }
 
 
@@ -761,6 +743,14 @@ input {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  background: var(--color-bg-alt);
+}
+
+.editorial__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .editorial__image-placeholder {
@@ -1164,9 +1154,8 @@ input {
     gap: 1rem;
   }
 
-  .press-bar__divider {
-    height: 22px;
-    margin: 0 1.25rem;
+  .press-bar__logos {
+    gap: clamp(1.5rem, 4vw, 2.5rem);
   }
 
   .collection__grid {
@@ -1314,13 +1303,28 @@ input {
   <!-- PRESS — As Featured In -->
   <!-- ═══════════════════════════════════════════════ -->
   <div class="press-bar">
-    <span class="press-bar__label">As Featured In</span>
+    <span class="press-bar__label">As Seen In</span>
     <div class="press-bar__logos">
-      <span class="press-bar__logo press-bar__logo--vogue">Vogue Business</span>
-      <span class="press-bar__divider"></span>
-      <span class="press-bar__logo press-bar__logo--forbes">Forbes</span>
-      <span class="press-bar__divider"></span>
-      <span class="press-bar__logo press-bar__logo--daily">The Daily</span>
+      <!-- Vogue Business wordmark -->
+      <span class="press-bar__logo" aria-label="Vogue Business">
+        <svg viewBox="0 0 260 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="press-bar__svg press-bar__svg--vogue">
+          <text x="0" y="26" font-family="'Playfair Display', 'Cormorant Garamond', Georgia, serif" font-size="30" font-weight="400" letter-spacing="3">VOGUE</text>
+          <text x="138" y="26" font-family="'Playfair Display', 'Cormorant Garamond', Georgia, serif" font-size="20" font-weight="400" letter-spacing="2">BUSINESS</text>
+        </svg>
+      </span>
+      <!-- Forbes wordmark -->
+      <span class="press-bar__logo" aria-label="Forbes">
+        <svg viewBox="0 0 130 34" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="press-bar__svg press-bar__svg--forbes">
+          <text x="0" y="28" font-family="'Playfair Display', 'Cormorant Garamond', Georgia, serif" font-size="34" font-weight="700" font-style="italic" letter-spacing="1">Forbes</text>
+        </svg>
+      </span>
+      <!-- The Daily Front Row wordmark -->
+      <span class="press-bar__logo" aria-label="The Daily Front Row">
+        <svg viewBox="0 0 105 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="press-bar__svg press-bar__svg--daily">
+          <text x="52" y="18" font-family="'Playfair Display', 'Cormorant Garamond', Georgia, serif" font-size="17" font-weight="400" font-style="italic" text-anchor="middle" letter-spacing="1">The Daily</text>
+          <text x="52" y="35" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle" letter-spacing="4">FRONT ROW</text>
+        </svg>
+      </span>
     </div>
   </div>
 
@@ -1426,10 +1430,8 @@ input {
 
       <article class="product-card reveal" data-product="5">
         <div class="product-card__image-wrap">
-          <div class="product-card__image" style="background: linear-gradient(145deg, #d4c8b8, #bfb3a1);">
-            <div class="product-card__image-inner">
-              <span class="product-card__placeholder-text" style="color: #2c2420;">Resort Shirt</span>
-            </div>
+          <div class="product-card__image">
+            <img src="https://cdn.shopify.com/s/files/1/0581/8882/4670/files/ArthAtelier_Laydown_AsymmetricShirt_2.webp?v=1772471004" alt="Heritage Print Resort Shirt" loading="lazy">
           </div>
           <div class="product-card__quick-add">
             <span class="product-card__quick-add-label">Quick Add</span>
@@ -1450,10 +1452,8 @@ input {
 
       <article class="product-card reveal" data-product="6">
         <div class="product-card__image-wrap">
-          <div class="product-card__image" style="background: linear-gradient(145deg, #4a4540, #2e2a26);">
-            <div class="product-card__image-inner">
-              <span class="product-card__placeholder-text">Wool Trousers</span>
-            </div>
+          <div class="product-card__image">
+            <img src="https://cdn.shopify.com/s/files/1/0581/8882/4670/files/ArthAtelier_Laydown_Embroidered_Trousers_123-New.webp?v=1772471224" alt="Straight-Leg Organic Wool Trousers" loading="lazy">
           </div>
           <div class="product-card__quick-add">
             <span class="product-card__quick-add-label">Quick Add</span>
@@ -1485,8 +1485,8 @@ input {
   <section class="editorial" id="craft">
     <div class="editorial__inner editorial__inner--image-left">
       <div class="editorial__image reveal reveal--slide-right">
-        <div class="editorial__image-frame" style="background: linear-gradient(160deg, #3a2f28, #6b5d50);">
-          <span class="editorial__image-placeholder">Artisan at work — Aari embroidery detail</span>
+        <div class="editorial__image-frame">
+          <img src="https://cdn.shopify.com/s/files/1/0581/8882/4670/files/ArthAtelier_Artisan_BlockPrinting.webp?v=1772471224" alt="Artisan block printing fabric by hand" loading="lazy" class="editorial__img">
         </div>
       </div>
       <div class="editorial__text reveal reveal--slide-left">
@@ -1524,8 +1524,8 @@ input {
         <a href="https://arth.shop/pages/traceability" class="btn btn--text">Discover Our Process &rarr;</a>
       </div>
       <div class="editorial__image reveal reveal--slide-left">
-        <div class="editorial__image-frame" style="background: linear-gradient(160deg, #e8dfd3, #c4b9a8);">
-          <span class="editorial__image-placeholder" style="color: #2c2420;">Traceability journey — QR code on garment</span>
+        <div class="editorial__image-frame">
+          <img src="https://cdn.shopify.com/s/files/1/0581/8882/4670/files/ArthAtelier_HangTag_Traceability.webp?v=1772471224" alt="Arth Atelier traceability hang tag" loading="lazy" class="editorial__img">
         </div>
       </div>
     </div>
