@@ -224,15 +224,13 @@ input {
 }
 
 .nav__logo-img {
-  height: 40px;
+  height: 36px;
   width: auto;
   display: block;
-  mix-blend-mode: multiply;
 }
 
 .nav--transparent .nav__logo-img {
-  filter: invert(1);
-  mix-blend-mode: screen;
+  filter: invert(1) brightness(2);
 }
 
 .nav__logo:hover {
