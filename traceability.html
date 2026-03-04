@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traceability & Provenance — Arth Atelier</title>
+  <meta name="description" content="Every Arth Atelier garment is traceable from farm to fiber to your wardrobe. Discover the materials we use, the ones we don't, and why transparency is at the heart of everything we do.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- NAVIGATION -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <nav class="nav nav--solid" id="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo"><img src="https://cdn.shopify.com/s/files/1/0581/8882/4670/files/Secondary_Logo_Caviar_3x_499f4767-b112-4d43-aaef-79a61bddb119.png?v=1745254263" alt="Arth Atelier" class="nav__logo-img" style="height:14px;max-height:14px;width:auto;"></a>
+      <ul class="nav__links">
+        <li><a href="index.html#collection">Shop All</a></li>
+        <li><a href="index.html#craft">Our Story</a></li>
+        <li><a href="traceability.html" class="nav__link--active">Traceability</a></li>
+        <li><a href="index.html#custom">Lookbook</a></li>
+      </ul>
+      <div class="nav__actions">
+        <button class="nav__search" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/>
+          </svg>
+        </button>
+        <button class="nav__cart" aria-label="Cart">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="nav__cart-count">0</span>
+        </button>
+        <button class="nav__menu-toggle" aria-label="Menu" id="menuToggle">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-menu__links">
+      <li><a href="index.html#collection">Shop All</a></li>
+      <li><a href="index.html#craft">Our Story</a></li>
+      <li><a href="traceability.html">Traceability</a></li>
+      <li><a href="index.html#custom">Lookbook</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- PAGE HERO — Minimal text-based hero -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="trace-hero">
+    <div class="trace-hero__inner">
+      <p class="trace-hero__eyebrow">Traceability & Provenance</p>
+      <h1 class="trace-hero__title">Sustainability Is<br>Not a Label.</h1>
+      <p class="trace-hero__subtitle">It's a practice.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- PHILOSOPHY STATEMENT -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="trace-philosophy">
+    <div class="trace-philosophy__inner reveal">
+      <div class="trace-philosophy__content">
+        <p class="trace-philosophy__lead">While not producing any clothes would be the most sustainable thing, that narrative fails to recognize the importance the textile industry holds in serving communities, sustaining expression of art, preserving craft & culture.</p>
+        <div class="trace-philosophy__divider"></div>
+        <p class="trace-philosophy__body">Our view on sustainability is producing garments with the least amount of environmental, social, or animal impact — and the most amount of longevity, reusability, & recyclability. We believe in achieving that through fundamental transparency — about the fabrics we use, why we use or don't use them, about where we source from, & about how we produce.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- IMPACT STATEMENT -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="trace-impact">
+    <div class="trace-impact__inner reveal">
+      <div class="trace-impact__stat">
+        <span class="trace-impact__number">70%</span>
+        <p class="trace-impact__caption">of fashion's environmental footprint comes from the choice of materials alone</p>
+      </div>
+      <div class="trace-impact__text">
+        <p>Because of this, we spent two years finding ways to establish a responsible supply chain — one that is short, sustainable, and intentional. Every decision has been guided by a value system of three pillars: the art, the craft, and the impact.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- PROVENANCE JOURNEY -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="trace-journey">
+    <div class="trace-journey__header reveal">
+      <p class="section-eyebrow">Provenance Journey</p>
+      <h2 class="trace-journey__title">Every Garment<br>Has a Story</h2>
+      <p class="trace-journey__subtitle">Each of our garments comes with a QR code that transparently shares the known history and journey of that piece. From farm, to fiber, to yarn, to fabric, to finishing & dyeing, and eventually — garment making.</p>
+    </div>
+    <div class="trace-journey__steps">
+      <div class="trace-journey__step reveal">
+        <span class="trace-journey__step-num">01</span>
+        <h3 class="trace-journey__step-title">Farm</h3>
+        <p class="trace-journey__step-text">Where our raw materials are responsibly sourced — from regenerative wool farms in Uruguay to organic cotton fields in India.</p>
+      </div>
+      <div class="trace-journey__step reveal">
+        <span class="trace-journey__step-num">02</span>
+        <h3 class="trace-journey__step-title">Fiber</h3>
+        <p class="trace-journey__step-text">Natural and cellulosic fibers are processed using methods that minimize water, chemical use, and environmental harm.</p>
+      </div>
+      <div class="trace-journey__step reveal">
+        <span class="trace-journey__step-num">03</span>
+        <h3 class="trace-journey__step-title">Yarn & Fabric</h3>
+        <p class="trace-journey__step-text">Spun and woven by partner mills — from Italian houses pioneering sustainable wool to Indian handlooms with multi-generational ties to weavers.</p>
+      </div>
+      <div class="trace-journey__step reveal">
+        <span class="trace-journey__step-num">04</span>
+        <h3 class="trace-journey__step-title">Finishing & Dyeing</h3>
+        <p class="trace-journey__step-text">Finished with care using low-impact dyes and processes that respect both artisans and the environment.</p>
+      </div>
+      <div class="trace-journey__step reveal">
+        <span class="trace-journey__step-num">05</span>
+        <h3 class="trace-journey__step-title">Garment Making</h3>
+        <p class="trace-journey__step-text">Handcrafted by multi-generational artisan families in India, whose techniques — Aari embroidery, Chikankari, hand-weaving — span centuries.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- MATERIALS WE USE -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="trace-materials">
+    <div class="trace-materials__header reveal">
+      <p class="section-eyebrow">Our Materials</p>
+      <h2 class="trace-materials__title">What We Use</h2>
+      <p class="trace-materials__subtitle">We hold ourselves to the highest standards when selecting materials. Where we were unable to source materials meeting our strict criteria for comfort, quality, and environmental and animal welfare — we created entirely new supply chains.</p>
+    </div>
+
+    <div class="trace-materials__grid">
+
+      <div class="trace-material-card reveal">
+        <div class="trace-material-card__header">
+          <h3 class="trace-material-card__title">Natural Fibers</h3>
+          <span class="trace-material-card__tag">Renewable & Biodegradable</span>
+        </div>
+        <div class="trace-material-card__body">
+          <div class="trace-material-card__item">
+            <h4>Organic Cotton</h4>
+            <p>Grown without synthetic pesticides or fertilizers, supporting soil health and farmer communities while minimizing chemical runoff.</p>
+          </div>
+          <div class="trace-material-card__item">
+            <h4>Organic Wool</h4>
+            <p>Sourced from farms that uphold high standards of animal welfare and land stewardship, with a focus on regenerative farming practices.</p>
+          </div>
+          <div class="trace-material-card__item">
+            <h4>Peace Silk</h4>
+            <p>An ethical alternative to conventional silk — the silkworm completes its life cycle naturally before the cocoon is harvested, ensuring no harm in the process.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="trace-material-card reveal">
+        <div class="trace-material-card__header">
+          <h3 class="trace-material-card__title">Cellulosic Fibers</h3>
+          <span class="trace-material-card__tag">Plant-Based & Low Impact</span>
+        </div>
+        <div class="trace-material-card__body">
+          <div class="trace-material-card__item">
+            <h4>Lyocell</h4>
+            <p>Made from sustainably sourced wood via a closed-loop process that recycles over 99% of water and solvents. Exceptionally soft with a fraction of the environmental footprint.</p>
+          </div>
+          <div class="trace-material-card__item">
+            <h4>Banana Fiber</h4>
+            <p>Extracted from the stems of banana plants — agricultural byproducts usually discarded or burned — reducing crop-burning pollution and providing additional income for farming communities.</p>
+          </div>
+          <div class="trace-material-card__item">
+            <h4>Lotus Fabric</h4>
+            <p>One of the rarest textiles in the world, derived from lotus plant stems. Naturally breathable, lightweight, and produced with minimal environmental impact.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="trace-material-card trace-material-card--highlight reveal">
+        <div class="trace-material-card__header">
+          <h3 class="trace-material-card__title">NATIVA&trade; Certified Wool</h3>
+          <span class="trace-material-card__tag">Blockchain-Verified</span>
+        </div>
+        <div class="trace-material-card__body">
+          <div class="trace-material-card__item">
+            <h4>Regenerative Merino</h4>
+            <p>One of our defining materials — sourced from farms in Uruguay that uphold high standards of animal welfare, land stewardship, and full blockchain-backed traceability from farm to finished garment.</p>
+          </div>
+          <div class="trace-material-card__item">
+            <h4>Deadstock Fabrics</h4>
+            <p>We repurpose surplus fabrics from luxury mills that would otherwise go to waste — extending their lifecycle and reducing demand for new production. These are the exception to our full traceability, as their prior journey is not always documented.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- DIVIDER QUOTE -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="trace-quote reveal">
+    <div class="trace-quote__inner">
+      <blockquote class="trace-quote__text">
+        <p>"Building a tangible, traceable journey for each of our fabric platforms has been extremely challenging but deeply rewarding."</p>
+        <cite>— Tamanna Mullen, Founder</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- MATERIALS WE AVOID -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="trace-avoid">
+    <div class="trace-avoid__inner">
+      <div class="trace-avoid__header reveal">
+        <p class="section-eyebrow">Our Standards</p>
+        <h2 class="trace-avoid__title">What We Don't Use</h2>
+        <p class="trace-avoid__subtitle">There are materials whose environmental, ethical, or recyclability costs we believe are simply too high. Here's what we've excluded from our supply chain — and why.</p>
+      </div>
+
+      <div class="trace-avoid__list">
+
+        <div class="trace-avoid__item reveal">
+          <div class="trace-avoid__item-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </div>
+          <div class="trace-avoid__item-content">
+            <h3>Leather & Fur</h3>
+            <p>There is nothing ethical about clothing made from animals' skin. The production of leather and fur contributes to climate change, land devastation, pollution, and water contamination.</p>
+          </div>
+        </div>
+
+        <div class="trace-avoid__item reveal">
+          <div class="trace-avoid__item-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </div>
+          <div class="trace-avoid__item-content">
+            <h3>Virgin Polyester & Nylon</h3>
+            <p>Derived from non-renewable petroleum resources through energy-intensive production processes. These synthetic fabrics are non-biodegradable and contribute to microplastic pollution with every wash.</p>
+          </div>
+        </div>
+
+        <div class="trace-avoid__item reveal">
+          <div class="trace-avoid__item-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </div>
+          <div class="trace-avoid__item-content">
+            <h3>Poly-Cotton Blends</h3>
+            <p>While common in the industry, poly-cotton blends are extremely challenging to recycle on a large scale. The inseparable fusion of natural and synthetic fibers creates end-of-life complications that undermine circularity.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SUPPLY CHAIN -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="trace-chain">
+    <div class="trace-chain__inner">
+      <div class="trace-chain__text reveal">
+        <p class="section-eyebrow">Our Supply Chain</p>
+        <h2 class="trace-chain__title">Short, Sustainable<br>& Intentional</h2>
+        <p class="trace-chain__body">Our collections are intentionally built on a short, sustainable, and traceable supply chain. As an independent artisanal brand, our biggest challenges were data gathering — convincing mills, spinners, and farms to share detailed process information — while navigating high MOQs and aligning lead times across partners with very different scales and systems.</p>
+        <p class="trace-chain__body">Our partnerships range from Italian mills pioneering sustainable wool fabrics to Indian handloom suppliers with multi-generational ties to weavers and growers. All of our pieces are either partially or fully traceable through our tech-forward provenance journey.</p>
+      </div>
+      <div class="trace-chain__image reveal reveal--slide-left">
+        <div class="trace-chain__image-frame">
+          <img src="https://cdn.shopify.com/s/files/1/0581/8882/4670/files/Supply_Chain_1.png?v=1772413828" alt="Arth Atelier supply chain map" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- CTA -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="trace-cta">
+    <div class="trace-cta__inner reveal">
+      <p class="section-eyebrow">Explore Further</p>
+      <h2 class="trace-cta__title">See the Journey for Yourself</h2>
+      <p class="trace-cta__body">Every Arth Atelier garment includes a QR code that reveals its full provenance — scan it to trace the story from raw material to finished piece.</p>
+      <a href="index.html#collection" class="btn btn--outline">Shop the Collection</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- NEWSLETTER -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="newsletter reveal">
+    <div class="newsletter__inner">
+      <h2 class="newsletter__title">Join the Atelier</h2>
+      <p class="newsletter__text">Be the first to know about new collections, artisan stories, and exclusive access.</p>
+      <form class="newsletter__form" action="#" method="post">
+        <input type="email" class="newsletter__input" placeholder="Your email address" required style="border-radius:9999px;-webkit-border-radius:9999px;">
+        <button type="submit" class="newsletter__submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- FOOTER -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="/" class="footer__logo">ARTH ATELIER</a>
+        <p class="footer__tagline">Contemporary, Artisanal &<br>Handcrafted Fashion</p>
+        <p class="footer__origin">Designed in New England<br>Handcrafted in India</p>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__heading">Shop</h4>
+        <ul>
+          <li><a href="https://arth.shop/collections/shop-all">All Pieces</a></li>
+          <li><a href="https://arth.shop/collections">Collections</a></li>
+          <li><a href="https://arth.shop/pages/custom-orders">Custom Orders</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__heading">About</h4>
+        <ul>
+          <li><a href="https://arth.shop/pages/our-story">Our Story</a></li>
+          <li><a href="traceability.html">Traceability</a></li>
+          <li><a href="mailto:info@arth.shop">Contact</a></li>
+          <li><a href="https://arth.shop/pages/careers">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__heading">Connect</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/arthatelier/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="mailto:info@arth.shop">info@arth.shop</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2026 Arth Atelier. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="traceability.js"></script>
+</body>
+</html>
