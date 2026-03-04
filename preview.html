@@ -954,7 +954,8 @@ input {
   flex: 1;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 9999px;
+  border-radius: 9999px !important;
+  -webkit-border-radius: 9999px !important;
   color: var(--color-white);
   padding: 0.9rem 1.25rem;
   font-size: 0.8rem;
@@ -1592,7 +1593,7 @@ input {
       <h2 class="newsletter__title">Join the Atelier</h2>
       <p class="newsletter__text">Be the first to know about new collections, artisan stories, and exclusive access.</p>
       <form class="newsletter__form" action="#" method="post">
-        <input type="email" class="newsletter__input" placeholder="Your email address" required>
+        <input type="email" class="newsletter__input" placeholder="Your email address" required style="border-radius:9999px;-webkit-border-radius:9999px;">
         <button type="submit" class="newsletter__submit">Subscribe</button>
       </form>
     </div>
