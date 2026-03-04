@@ -2194,7 +2194,8 @@ input {
   background: var(--color-surface);
 }
 
-.about-artisans__image-frame img {
+.about-artisans__image-frame img,
+.about-artisans__image-frame video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -2296,7 +2297,8 @@ input {
   background: var(--color-surface);
 }
 
-.about-custom__image-frame img {
+.about-custom__image-frame img,
+.about-custom__image-frame video {
   width: 100%;
   height: 100%;
   object-fit: cover;
