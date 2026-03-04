@@ -224,9 +224,11 @@ input {
 }
 
 .nav__logo-img {
-  height: 14px;
-  width: auto;
+  height: 14px !important;
+  max-height: 14px !important;
+  width: auto !important;
   display: block;
+  object-fit: contain;
 }
 
 .nav--transparent .nav__logo-img {
