@@ -218,12 +218,20 @@ input {
 }
 
 .nav__logo {
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  font-weight: 400;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
+  display: flex;
+  align-items: center;
   transition: opacity var(--duration-fast);
+}
+
+.nav__logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+  mix-blend-mode: multiply;
+}
+
+.nav--transparent .nav__logo-img {
+  mix-blend-mode: screen;
 }
 
 .nav__logo:hover {
