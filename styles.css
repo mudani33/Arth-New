@@ -969,6 +969,7 @@ input {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   border: 1px solid var(--color-white);
+  border-radius: 9999px;
   transition: all var(--duration-normal) var(--ease-smooth);
   white-space: nowrap;
 }
