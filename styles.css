@@ -70,6 +70,16 @@ body {
 img {
   max-width: 100%;
   display: block;
+  border-radius: 0 !important;
+}
+
+img, picture, video, figure,
+.editorial__image-frame,
+.editorial__img,
+.product-card__image-wrap,
+.product-card__image,
+.trace-chain__image-frame {
+  border-radius: 0 !important;
 }
 
 a {
