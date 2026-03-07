@@ -197,14 +197,13 @@ input {
 }
 
 .nav--transparent {
-  background: transparent;
-  border-bottom-color: transparent;
+  background: rgba(250, 248, 245, 1);
 }
 
 .nav--transparent .nav__logo,
 .nav--transparent .nav__links a,
 .nav--transparent .nav__actions button {
-  color: var(--color-white);
+  color: var(--color-text);
 }
 
 .nav__inner {
@@ -232,7 +231,7 @@ input {
 }
 
 .nav--transparent .nav__logo-img {
-  filter: invert(1) brightness(2);
+  filter: none;
 }
 
 .nav__logo:hover {
