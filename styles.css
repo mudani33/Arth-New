@@ -1763,6 +1763,22 @@ input {
   display: block;
 }
 
+/* --- Banner Image --- */
+.trace-banner {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--container-padding);
+}
+
+.trace-banner__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 500px;
+}
+
 /* --- CTA Section --- */
 .trace-cta {
   padding: var(--space-2xl) var(--container-padding);
