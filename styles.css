@@ -1978,23 +1978,20 @@ input {
 
 /* --- Founder Section --- */
 .about-founder {
-  padding: var(--space-2xl) var(--container-padding) var(--space-xl);
+  padding: 0 0 var(--space-xl);
 }
 
 .about-founder__inner {
-  max-width: var(--container-max);
+  max-width: 100%;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(2rem, 5vw, 5rem);
-  align-items: center;
+  display: block;
 }
 
 .about-founder__image-frame {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
-  border-radius: 1rem;
+  border-radius: 0;
   background: var(--color-surface);
 }
 
@@ -2003,6 +2000,13 @@ input {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.about-founder__text {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--container-padding) 0;
+  text-align: center;
 }
 
 .about-founder__title {
@@ -2031,6 +2035,7 @@ input {
   padding-left: 1.5rem;
   border-left: 2px solid var(--color-border);
   margin: 1.75rem 0;
+  text-align: left;
 }
 
 /* --- Mission Statement --- */
@@ -2370,9 +2375,8 @@ input {
     height: 1px;
   }
 
-  .about-founder__inner {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .about-founder__image-frame {
+    aspect-ratio: 3 / 4;
   }
 
   .about-philosophy__inner {
