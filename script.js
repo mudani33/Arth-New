@@ -32,20 +32,6 @@
       nav.classList.remove('nav--transparent');
     }
 
-    // Hide/reveal on scroll direction
-    if (currentScrollY > heroHeight) {
-      if (currentScrollY > lastScrollY + 5 && !navHidden) {
-        nav.classList.add('nav--hidden');
-        navHidden = true;
-      } else if (currentScrollY < lastScrollY - 5 && navHidden) {
-        nav.classList.remove('nav--hidden');
-        navHidden = false;
-      }
-    } else {
-      nav.classList.remove('nav--hidden');
-      navHidden = false;
-    }
-
     lastScrollY = currentScrollY;
     ticking = false;
   }
