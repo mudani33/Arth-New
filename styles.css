@@ -1895,12 +1895,12 @@ input {
 
 /* --- About Hero --- */
 .about-hero {
-  min-height: 65vh;
+  min-height: 45vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: calc(var(--nav-height) + var(--space-xl)) var(--container-padding) var(--space-xl);
+  padding: calc(var(--nav-height) + var(--space-lg)) var(--container-padding) var(--space-lg);
   background: var(--color-bg);
 }
 
@@ -1939,7 +1939,7 @@ input {
 
 /* --- The Name --- */
 .about-name {
-  padding: var(--space-xl) var(--container-padding);
+  padding: var(--space-lg) var(--container-padding);
   background: var(--color-bg-alt);
 }
 
@@ -1989,7 +1989,7 @@ input {
 /* --- Founder Section --- */
 /* --- About Prose (simple text sections) --- */
 .about-prose {
-  padding: var(--space-xl) var(--container-padding);
+  padding: var(--space-lg) var(--container-padding);
 }
 
 .about-prose__inner {
@@ -2024,7 +2024,7 @@ input {
 
 /* Quote variant */
 .about-prose--quote {
-  padding: var(--space-lg) var(--container-padding);
+  padding: var(--space-md) var(--container-padding);
 }
 
 .about-prose__blockquote {
