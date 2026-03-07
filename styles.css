@@ -184,9 +184,9 @@ input {
   right: 0;
   z-index: 1000;
   height: var(--nav-height);
-  background: rgba(250, 248, 245, 0.92);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(250, 248, 245, 1);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   transition: transform var(--duration-normal) var(--ease-smooth),
               background var(--duration-normal) var(--ease-smooth);
@@ -1249,9 +1249,9 @@ input {
 
 /* --- Nav solid variant (no transparent hero on this page) --- */
 .nav--solid {
-  background: rgba(250, 248, 245, 0.95);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(250, 248, 245, 1);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .nav__link--active {
