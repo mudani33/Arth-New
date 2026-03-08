@@ -1137,6 +1137,444 @@ input {
 
 
 /* ═══════════════════════════════════════════════════════════
+   LOOKBOOK — Vogue Editorial
+   ═══════════════════════════════════════════════════════════ */
+
+/* --- Hero --- */
+.lb-hero {
+  padding: calc(var(--nav-height) + 6rem) var(--container-padding) 5rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.lb-hero__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.lb-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 10vw, 8rem);
+  font-weight: 300;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  margin-bottom: 2rem;
+}
+
+.lb-hero__subtitle {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* --- Full-width spread --- */
+.lb-spread--full {
+  padding: 0 var(--container-padding);
+  max-width: var(--container-max);
+  margin: 0 auto 2rem;
+}
+
+.lb-spread__image-full {
+  width: 100%;
+  overflow: hidden;
+}
+
+.lb-spread__image-full img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.lb-spread__caption {
+  max-width: 560px;
+  margin: 2.5rem auto 0;
+  text-align: center;
+}
+
+.lb-spread__number {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.lb-spread__name {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.lb-spread__desc {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.lb-spread__link {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.25rem;
+  transition: border-color var(--duration-fast) var(--ease-smooth);
+}
+
+.lb-spread__link:hover {
+  border-color: var(--color-text);
+}
+
+/* --- Quote --- */
+.lb-quote {
+  padding: 5rem var(--container-padding);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.lb-quote__text {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+}
+
+.lb-quote__cite {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  font-style: normal;
+}
+
+/* --- Diptych (two images side by side) --- */
+.lb-spread--diptych {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1rem, 2vw, 2rem);
+  padding: 0 var(--container-padding);
+  max-width: var(--container-max);
+  margin: 0 auto 2rem;
+}
+
+.lb-spread__col {
+  position: relative;
+}
+
+.lb-spread__image {
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+}
+
+.lb-spread__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s var(--ease-smooth);
+}
+
+.lb-spread__col:hover .lb-spread__image img {
+  transform: scale(1.02);
+}
+
+.lb-spread__meta {
+  padding-top: 1.25rem;
+}
+
+.lb-spread__meta .lb-spread__name {
+  text-align: left;
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.lb-spread__price {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: var(--color-text-muted);
+}
+
+/* --- Editorial (image + text side by side) --- */
+.lb-spread--editorial {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 3rem 0;
+  align-items: center;
+}
+
+.lb-spread__image-side {
+  width: 100%;
+  overflow: hidden;
+}
+
+.lb-spread__image-side img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.lb-spread__text-side {
+  padding: 3rem clamp(2rem, 5vw, 5rem);
+}
+
+.lb-spread--reversed {
+  direction: rtl;
+}
+
+.lb-spread--reversed > * {
+  direction: ltr;
+}
+
+.lb-spread__headline {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.lb-spread__body {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 300;
+  line-height: 1.85;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.lb-spread__body:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.lb-spread__product-tag {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.lb-spread__tag-name {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.lb-spread__tag-price {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 300;
+  color: var(--color-text-muted);
+}
+
+/* --- Interstitial text block --- */
+.lb-interstitial {
+  padding: 6rem var(--container-padding);
+  text-align: center;
+  background: var(--color-bg-alt);
+}
+
+.lb-interstitial__inner {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.lb-interstitial__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.lb-interstitial__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  font-weight: 300;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+
+.lb-interstitial__text {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 300;
+  line-height: 1.85;
+  color: var(--color-text-muted);
+}
+
+/* --- Craft section --- */
+.lb-craft {
+  padding: 3rem 0;
+}
+
+.lb-craft__inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 0;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  align-items: center;
+}
+
+.lb-craft__image {
+  overflow: hidden;
+}
+
+.lb-craft__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.lb-craft__text {
+  padding: 3rem clamp(2rem, 5vw, 5rem);
+}
+
+.lb-craft__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.lb-craft__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.lb-craft__body {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 300;
+  line-height: 1.85;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+/* --- CTA --- */
+.lb-cta {
+  padding: 5rem var(--container-padding);
+  text-align: center;
+}
+
+.lb-cta__inner {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.lb-cta__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.lb-cta__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 300;
+  line-height: 1.15;
+  margin-bottom: 2rem;
+}
+
+/* --- Lookbook Responsive --- */
+@media (max-width: 768px) {
+  .lb-hero {
+    padding-top: calc(var(--nav-height) + 3rem);
+    padding-bottom: 3rem;
+  }
+
+  .lb-hero__title {
+    font-size: clamp(3rem, 15vw, 5rem);
+  }
+
+  .lb-spread--diptych {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .lb-spread--editorial {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .lb-spread--reversed {
+    direction: ltr;
+  }
+
+  .lb-spread__text-side {
+    padding: 2rem var(--container-padding);
+  }
+
+  .lb-quote {
+    padding: 3rem var(--container-padding);
+  }
+
+  .lb-interstitial {
+    padding: 4rem var(--container-padding);
+  }
+
+  .lb-craft__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .lb-craft__text {
+    padding: 2rem var(--container-padding);
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════
    NEWSLETTER
    ═══════════════════════════════════════════════════════════ */
 .newsletter {
