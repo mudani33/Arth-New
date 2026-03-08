@@ -1114,20 +1114,25 @@ input {
    CUSTOM ORDERS
    ═══════════════════════════════════════════════════════════ */
 .custom {
-  padding: var(--space-lg) var(--container-padding);
+  padding: 2.5rem var(--container-padding);
   text-align: center;
 }
 
 .custom__inner {
-  max-width: 600px;
+  max-width: 520px;
   margin: 0 auto;
 }
 
+.custom__inner .section-title {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  margin-bottom: 1rem;
+}
+
 .custom__body {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: var(--color-text-muted);
-  line-height: 1.85;
-  margin-bottom: 2.5rem;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
 }
 
 
