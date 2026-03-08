@@ -10,7 +10,7 @@
   const hero = document.getElementById('hero');
   const menuToggle = document.getElementById('menuToggle');
   const mobileMenu = document.getElementById('mobileMenu');
-  const mobileLinks = mobileMenu.querySelectorAll('a');
+  const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
   const revealElements = document.querySelectorAll('.reveal');
   const productCards = document.querySelectorAll('.product-card');
 
