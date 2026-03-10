@@ -1,0 +1,25 @@
+<div class="shop-filters">
+    <div class="shop-filters__inner">
+      <div class="shop-filters__left">
+        <button class="shop-filter-btn active" data-filter="all">All</button>
+        {%- for tag in collection.all_tags -%}
+          <button class="shop-filter-btn" data-filter="{{ tag | handleize }}">{{ tag }}</button>
+        {%- endfor -%}
+      </div>
+      <div class="shop-filters__right">
+        <button class="shop-sort-btn">
+          Sort
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M3 5l3 3 3-3"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+{% schema %}
+{
+  "name": "Shop Filters",
+  "settings": []
+}
+{% endschema %}

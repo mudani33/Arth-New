@@ -1,0 +1,38 @@
+<header class="lb-hero">
+    <div class="lb-hero__inner">
+      <p class="lb-hero__eyebrow">{{ section.settings.eyebrow }}</p>
+      <h1 class="lb-hero__title">{{ section.settings.title }}</h1>
+      <p class="lb-hero__subtitle">{{ section.settings.subtitle }}</p>
+    </div>
+  </header>
+
+{% schema %}
+{
+  "name": "Lookbook Hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Arth Atelier"
+    },
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title",
+      "default": "Volume I:<br>Alibaug"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Shot on location along the coastal landscapes of Alibaug, India. A study in light, texture, and the quiet power of garments made entirely by hand."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lookbook Hero"
+    }
+  ]
+}
+{% endschema %}

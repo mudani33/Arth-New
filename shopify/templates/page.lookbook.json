@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "hero": { "type": "lookbook-hero" },
+    "spread-full": { "type": "lookbook-spread-full" },
+    "quote": { "type": "lookbook-quote" },
+    "diptych-1": { "type": "lookbook-diptych" },
+    "editorial": { "type": "lookbook-editorial" },
+    "interstitial": { "type": "lookbook-interstitial" },
+    "diptych-2": { "type": "lookbook-diptych-2" },
+    "craft": { "type": "lookbook-craft" },
+    "cta": { "type": "lookbook-cta" }
+  },
+  "order": ["hero", "spread-full", "quote", "diptych-1", "editorial", "interstitial", "diptych-2", "craft", "cta"]
+}

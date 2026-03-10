@@ -1,0 +1,59 @@
+<section class="lb-spread lb-spread--editorial reveal">
+    <div class="lb-spread__image-side">
+      <img src="{{ section.settings.image | image_url: width: 1920 }}" alt="{{ section.settings.alt }}">
+    </div>
+    <div class="lb-spread__text-side">
+      <span class="lb-spread__number">{{ section.settings.eyebrow }}</span>
+      <h2 class="lb-spread__headline">{{ section.settings.headline }}</h2>
+      <p class="lb-spread__body">{{ section.settings.body_1 }}</p>
+      <p class="lb-spread__body">{{ section.settings.body_2 }}</p>
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "Lookbook Editorial",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "alt",
+      "label": "Alt Text",
+      "default": "Arth Atelier lookbook — on location in Alibaug"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "The Collection"
+    },
+    {
+      "type": "html",
+      "id": "headline",
+      "label": "Headline",
+      "default": "East Meets<br>West"
+    },
+    {
+      "type": "textarea",
+      "id": "body_1",
+      "label": "Body Paragraph 1",
+      "default": "Every piece in this collection begins with a conversation between heritage and modernity. Fifth-generation artisans apply centuries-old Aari embroidery and Chikankari techniques to silhouettes drawn from contemporary menswear — blazers, cardigans, trousers cut for the way we live now."
+    },
+    {
+      "type": "textarea",
+      "id": "body_2",
+      "label": "Body Paragraph 2",
+      "default": "The result is clothing that carries the weight of tradition without the burden of costume. Garments that belong in a boardroom, on a terrace, or walking the streets of any city in the world."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lookbook Editorial"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,34 @@
+<section class="trace-hero">
+    <div class="trace-hero__inner">
+      <p class="trace-hero__eyebrow">{{ section.settings.eyebrow }}</p>
+      <h1 class="trace-hero__title">{{ section.settings.title }}</h1>
+      <p class="trace-hero__subtitle">{{ section.settings.subtitle }}</p>
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "Trace Hero",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Traceability & Provenance"
+    },
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title",
+      "default": "Sustainability Is<br>Not a Label."
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "It's a practice."
+    }
+  ]
+}
+{% endschema %}

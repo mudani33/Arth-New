@@ -1,0 +1,27 @@
+<section class="trace-banner">
+    {% if section.settings.image %}
+    <img src="{{ section.settings.image | image_url: width: 1920 }}" alt="{{ section.settings.alt }}" class="trace-banner__img">
+    {% else %}
+    <img src="https://cdn.shopify.com/s/files/1/0581/8882/4670/files/cotton-field-ready-for-harvesting-2024-12-05-13-02-59-utc.jpg?v=1744806683" alt="{{ section.settings.alt }}" class="trace-banner__img">
+    {% endif %}
+  </section>
+
+{% schema %}
+{
+  "name": "Trace Banner",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Banner Image"
+    },
+    {
+      "type": "text",
+      "id": "alt",
+      "label": "Alt Text",
+      "default": "Cotton field ready for harvesting"
+    }
+  ]
+}
+{% endschema %}

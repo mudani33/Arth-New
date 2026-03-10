@@ -1,0 +1,18 @@
+{
+  "general": {
+    "search": "Search",
+    "cart": "Cart",
+    "menu": "Menu"
+  },
+  "products": {
+    "quick_add": "Quick Add"
+  },
+  "newsletter": {
+    "title": "Join the Atelier",
+    "text": "Be the first to know about new collections, artisan stories, and exclusive access.",
+    "placeholder": "Your email address",
+    "submit": "Subscribe",
+    "success": "Thank you",
+    "success_placeholder": "You're on the list"
+  }
+}

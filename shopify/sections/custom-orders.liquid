@@ -1,0 +1,44 @@
+<section class="custom" id="custom">
+    <div class="custom__inner reveal">
+      <h2 class="section-title">{{ section.settings.heading }}</h2>
+      <p class="custom__body">{{ section.settings.body }}</p>
+      <a href="{{ section.settings.cta_link }}" class="btn btn--primary">{{ section.settings.cta_text }}</a>
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "Custom Orders",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Custom & Made-to-Order"
+    },
+    {
+      "type": "textarea",
+      "id": "body",
+      "label": "Body Text",
+      "default": "We honor individuality through master craftsmanship. Whether you need tall sizing for frames over 6'0\" or a fully bespoke, one-of-a-kind piece — our atelier is at your service."
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA Text",
+      "default": "Inquire Now"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "CTA Link",
+      "default": "mailto:info@arth.shop"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Orders"
+    }
+  ]
+}
+{% endschema %}

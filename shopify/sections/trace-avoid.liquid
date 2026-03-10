@@ -1,0 +1,97 @@
+<section class="trace-avoid">
+    <div class="trace-avoid__inner">
+      <div class="trace-avoid__header reveal">
+        <p class="section-eyebrow">{{ section.settings.eyebrow }}</p>
+        <h2 class="trace-avoid__title">{{ section.settings.title }}</h2>
+        <p class="trace-avoid__subtitle">{{ section.settings.subtitle }}</p>
+      </div>
+      <div class="trace-avoid__list">
+        {% for block in section.blocks %}
+        <div class="trace-avoid__item reveal" {{ block.shopify_attributes }}>
+          <div class="trace-avoid__item-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </div>
+          <div class="trace-avoid__item-content">
+            <h3>{{ block.settings.title }}</h3>
+            <p>{{ block.settings.description }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "Trace Avoid",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Our Standards"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "What We Don't Use"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "There are materials whose environmental, ethical, or recyclability costs we believe are simply too high. Here's what we've excluded from our supply chain — and why."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Avoided Material",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Trace Avoid",
+      "blocks": [
+        {
+          "type": "item",
+          "settings": {
+            "title": "Leather & Fur",
+            "description": "The environmental cost of livestock farming — including land use, water consumption, and greenhouse gas emissions — combined with ethical concerns around animal welfare, makes leather and fur incompatible with our values."
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "title": "Virgin Polyester & Nylon",
+            "description": "Derived from petroleum, these synthetic fibers are non-biodegradable, shed microplastics with every wash, and contribute to fossil fuel dependency. We avoid them entirely in favor of natural and cellulosic alternatives."
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "title": "Poly-Cotton Blends",
+            "description": "While blending polyester with cotton may improve durability, it renders the fabric nearly impossible to recycle. We choose mono-fiber compositions that support circularity and end-of-life recyclability."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,39 @@
+<section class="image-break reveal">
+    <div class="image-break__inner" style="background: {{ section.settings.background_gradient }};">
+      <blockquote class="image-break__quote">
+        <p>"{{ section.settings.quote_text }}"</p>
+        <cite>{{ section.settings.cite_text }}</cite>
+      </blockquote>
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "Image Break Quote",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "quote_text",
+      "label": "Quote Text",
+      "default": "A dialogue between cultural expressions \u2014 where the precision of Western tailoring meets the soul and beauty of Eastern craft."
+    },
+    {
+      "type": "text",
+      "id": "cite_text",
+      "label": "Citation",
+      "default": "\u2014 Tamanna Mullen, Founder"
+    },
+    {
+      "type": "text",
+      "id": "background_gradient",
+      "label": "Background Gradient CSS",
+      "default": "linear-gradient(135deg, #2c2420, #4a3f38, #6b5d50)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Break Quote"
+    }
+  ]
+}
+{% endschema %}

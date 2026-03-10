@@ -1,0 +1,110 @@
+<section class="trace-materials">
+    <div class="trace-materials__header reveal">
+      <p class="section-eyebrow">{{ section.settings.eyebrow }}</p>
+      <h2 class="trace-materials__title">{{ section.settings.title }}</h2>
+      <p class="trace-materials__subtitle">{{ section.settings.subtitle }}</p>
+    </div>
+    <div class="trace-materials__grid">
+      {% for block in section.blocks %}
+      <div class="trace-materials__card{% if block.settings.highlight %} trace-materials__card--highlight{% endif %} reveal" {{ block.shopify_attributes }}>
+        <div class="trace-materials__card-header">
+          <h3 class="trace-materials__card-title">{{ block.settings.title }}</h3>
+          <span class="trace-materials__card-tag">{{ block.settings.tag }}</span>
+        </div>
+        <div class="trace-materials__card-body">
+          {{ block.settings.items }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "Trace Materials",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Our Materials"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "What We Use"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "We hold ourselves to the highest standards when selecting materials — prioritizing natural fibers, responsible sourcing, and end-of-life recyclability."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "material_card",
+      "name": "Material Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Card Title"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Tag"
+        },
+        {
+          "type": "checkbox",
+          "id": "highlight",
+          "label": "Highlight Card",
+          "default": false
+        },
+        {
+          "type": "html",
+          "id": "items",
+          "label": "Material Items HTML"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Trace Materials",
+      "blocks": [
+        {
+          "type": "material_card",
+          "settings": {
+            "title": "Natural Fibers",
+            "tag": "Natural",
+            "highlight": false,
+            "items": "<div class=\"trace-materials__item\"><h4 class=\"trace-materials__item-name\">Merino Wool</h4><p class=\"trace-materials__item-origin\">Uruguay — Regenerative farms</p><p class=\"trace-materials__item-desc\">Soft, breathable, and biodegradable. Sourced from non-mulesed sheep raised on regenerative pastures.</p></div><div class=\"trace-materials__item\"><h4 class=\"trace-materials__item-name\">Organic Cotton</h4><p class=\"trace-materials__item-origin\">India — Certified organic farms</p><p class=\"trace-materials__item-desc\">Grown without synthetic pesticides or GMO seeds. Uses significantly less water than conventional cotton.</p></div><div class=\"trace-materials__item\"><h4 class=\"trace-materials__item-name\">Silk</h4><p class=\"trace-materials__item-origin\">India — Traditional silk-weaving communities</p><p class=\"trace-materials__item-desc\">Wild and peace silk varieties that support artisan livelihoods while minimizing harm.</p></div>"
+          }
+        },
+        {
+          "type": "material_card",
+          "settings": {
+            "title": "Cellulosic Fibers",
+            "tag": "Cellulosic",
+            "highlight": false,
+            "items": "<div class=\"trace-materials__item\"><h4 class=\"trace-materials__item-name\">Tencel™ Lyocell</h4><p class=\"trace-materials__item-origin\">Austria — Lenzing AG</p><p class=\"trace-materials__item-desc\">Made from sustainably harvested wood pulp in a closed-loop process that recovers 99% of solvents.</p></div><div class=\"trace-materials__item\"><h4 class=\"trace-materials__item-name\">Cupro</h4><p class=\"trace-materials__item-origin\">Japan — Asahi Kasei</p><p class=\"trace-materials__item-desc\">Derived from cotton linter waste. Silky, breathable, and fully biodegradable.</p></div>"
+          }
+        },
+        {
+          "type": "material_card",
+          "settings": {
+            "title": "Signature Blend",
+            "tag": "Exclusive",
+            "highlight": true,
+            "items": "<div class=\"trace-materials__item\"><h4 class=\"trace-materials__item-name\">Arth Wool-Silk</h4><p class=\"trace-materials__item-origin\">Italy & India — Custom developed</p><p class=\"trace-materials__item-desc\">Our proprietary blend combining the warmth of merino wool with the luster of peace silk — designed for drape, durability, and elegance.</p></div>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

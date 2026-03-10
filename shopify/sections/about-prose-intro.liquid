@@ -1,0 +1,19 @@
+<section class="about-prose">
+    <div class="about-prose__inner reveal">
+      {{ section.settings.body }}
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "About Prose Intro",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body",
+      "default": "<p class=\"about-prose__text\">Arth Atelier is a contemporary, ready-to-wear brand blending artisanal craftsmanship with modern design. Rooted in an East-meets-West philosophy, every piece is a celebration of craft, heritage, and meticulous workmanship.<\/p><p class=\"about-prose__text\">Born from a deep desire to create garments that carry emotional and cultural depth — pieces that feel personal, rooted, yet global — the brand exists to highlight generations of artists who have passed down traditional techniques that are a cherished part of India's rich cultural heritage.<\/p>"
+    }
+  ]
+}
+{% endschema %}

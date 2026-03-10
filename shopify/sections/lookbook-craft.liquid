@@ -1,0 +1,72 @@
+<section class="lb-spread lb-spread--editorial lb-spread--reversed reveal">
+    <div class="lb-spread__image-side">
+      <img src="{{ section.settings.image | image_url: width: 1920 }}" alt="{{ section.settings.alt }}">
+    </div>
+    <div class="lb-spread__text-side">
+      <span class="lb-spread__number">{{ section.settings.eyebrow }}</span>
+      <h2 class="lb-spread__headline">{{ section.settings.headline }}</h2>
+      <p class="lb-spread__body">{{ section.settings.body_1 }}</p>
+      <p class="lb-spread__body">{{ section.settings.body_2 }}</p>
+      <a href="{{ section.settings.link_url }}" class="lb-spread__link">{{ section.settings.link_text }}</a>
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "Lookbook Craft",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "alt",
+      "label": "Alt Text",
+      "default": "Arth Atelier lookbook — hand-embroidered detail"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "The Craft"
+    },
+    {
+      "type": "html",
+      "id": "headline",
+      "label": "Headline",
+      "default": "Made<br>by Hand"
+    },
+    {
+      "type": "textarea",
+      "id": "body_1",
+      "label": "Body Paragraph 1",
+      "default": "Each garment requires dozens of hours of hand embroidery — stitches placed one at a time by artisans who have inherited these techniques through five and six generations. There is no shortcut, no machine equivalent. Only patience, mastery, and the kind of beauty that comes from human touch."
+    },
+    {
+      "type": "textarea",
+      "id": "body_2",
+      "label": "Body Paragraph 2",
+      "default": "We work exclusively with organic wool, peace silk, Lyocell, and upcycled deadstock. Every material is traceable from farm to finished piece."
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link Text",
+      "default": "Explore Our Traceability"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL",
+      "default": "/pages/traceability"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lookbook Craft"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,52 @@
+<section class="about-prose about-prose--links">
+    <div class="about-prose__inner reveal">
+      {%- for block in section.blocks -%}
+        <a href="{{ block.settings.url }}" class="about-prose__link" {{ block.shopify_attributes }}>{{ block.settings.label }}</a>
+      {%- endfor -%}
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "About Links",
+  "blocks": [
+    {
+      "type": "link",
+      "name": "Link",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "About Links",
+      "blocks": [
+        {
+          "type": "link",
+          "settings": {
+            "label": "Traceability &rarr;",
+            "url": "/pages/traceability"
+          }
+        },
+        {
+          "type": "link",
+          "settings": {
+            "label": "Shop the Collection &rarr;",
+            "url": "/collections/all"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

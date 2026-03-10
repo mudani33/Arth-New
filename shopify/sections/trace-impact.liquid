@@ -1,0 +1,38 @@
+<section class="trace-impact">
+    <div class="trace-impact__inner reveal">
+      <div class="trace-impact__stat">
+        <span class="trace-impact__number">{{ section.settings.stat_number }}</span>
+        <p class="trace-impact__caption">{{ section.settings.caption }}</p>
+      </div>
+      <div class="trace-impact__text">
+        <p>{{ section.settings.body }}</p>
+      </div>
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "Trace Impact",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "text",
+      "id": "stat_number",
+      "label": "Stat Number",
+      "default": "70%"
+    },
+    {
+      "type": "textarea",
+      "id": "caption",
+      "label": "Caption",
+      "default": "of fashion's environmental footprint comes from the choice of materials alone"
+    },
+    {
+      "type": "textarea",
+      "id": "body",
+      "label": "Body Text",
+      "default": "Because of this, we spent two years finding ways to establish a responsible supply chain — one that is short, sustainable, and intentional. Every decision has been guided by a value system of three pillars: the art, the craft, and the impact."
+    }
+  ]
+}
+{% endschema %}

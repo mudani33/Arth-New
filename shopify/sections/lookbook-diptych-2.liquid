@@ -1,0 +1,47 @@
+<section class="lb-spread lb-spread--diptych reveal">
+    <div class="lb-spread__col">
+      <div class="lb-spread__image">
+        <img src="{{ section.settings.image_left | image_url: width: 1920 }}" alt="{{ section.settings.alt_left }}">
+      </div>
+    </div>
+    <div class="lb-spread__col">
+      <div class="lb-spread__image">
+        <img src="{{ section.settings.image_right | image_url: width: 1920 }}" alt="{{ section.settings.alt_right }}">
+      </div>
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "Lookbook Diptych 2",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_left",
+      "label": "Left Image"
+    },
+    {
+      "type": "text",
+      "id": "alt_left",
+      "label": "Left Alt Text",
+      "default": "Arth Atelier editorial — Alibaug"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_right",
+      "label": "Right Image"
+    },
+    {
+      "type": "text",
+      "id": "alt_right",
+      "label": "Right Alt Text",
+      "default": "Arth Atelier editorial — Alibaug"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lookbook Diptych 2"
+    }
+  ]
+}
+{% endschema %}

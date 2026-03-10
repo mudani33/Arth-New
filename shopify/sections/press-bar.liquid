@@ -1,0 +1,96 @@
+<div class="press-bar">
+    <span class="press-bar__label">{{ section.settings.label }}</span>
+    <div class="press-bar__logos">
+      {%- for block in section.blocks -%}
+      <span class="press-bar__logo" aria-label="{{ block.settings.alt_text }}" {{ block.shopify_attributes }}>
+        {%- if block.settings.logo_image != blank -%}
+          <img src="{{ block.settings.logo_image | image_url: width: 400 }}" alt="{{ block.settings.alt_text }}" class="press-bar__img press-bar__img--{{ block.settings.css_modifier }}">
+        {%- else -%}
+          <img src="{{ block.settings.logo_url }}" alt="{{ block.settings.alt_text }}" class="press-bar__img press-bar__img--{{ block.settings.css_modifier }}">
+        {%- endif -%}
+      </span>
+      {%- endfor -%}
+    </div>
+  </div>
+
+{% schema %}
+{
+  "name": "Press Bar",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Label",
+      "default": "As Seen In"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "Press Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo_image",
+          "label": "Logo Image"
+        },
+        {
+          "type": "text",
+          "id": "logo_url",
+          "label": "Logo URL (fallback if no image picked)",
+          "default": ""
+        },
+        {
+          "type": "text",
+          "id": "alt_text",
+          "label": "Alt Text / Aria Label",
+          "default": ""
+        },
+        {
+          "type": "select",
+          "id": "css_modifier",
+          "label": "CSS Class Modifier",
+          "options": [
+            { "value": "vogue", "label": "Vogue" },
+            { "value": "forbes", "label": "Forbes" },
+            { "value": "daily", "label": "Daily Front Row" },
+            { "value": "custom", "label": "Custom" }
+          ],
+          "default": "custom"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Press Bar",
+      "blocks": [
+        {
+          "type": "logo",
+          "settings": {
+            "logo_url": "https://cdn.shopify.com/s/files/1/0581/8882/4670/files/Vogue_Business_svg.png?v=1763158432",
+            "alt_text": "Vogue Business",
+            "css_modifier": "vogue"
+          }
+        },
+        {
+          "type": "logo",
+          "settings": {
+            "logo_url": "https://cdn.shopify.com/s/files/1/0581/8882/4670/files/Forbes-Logo-1999-present.png?v=1760836092",
+            "alt_text": "Forbes",
+            "css_modifier": "forbes"
+          }
+        },
+        {
+          "type": "logo",
+          "settings": {
+            "logo_url": "https://cdn.shopify.com/s/files/1/0581/8882/4670/files/DFR_logo_footer.png?v=1762101445",
+            "alt_text": "The Daily Front Row",
+            "css_modifier": "daily"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

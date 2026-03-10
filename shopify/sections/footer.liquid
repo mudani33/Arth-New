@@ -1,0 +1,68 @@
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <a href="{{ routes.root_url }}" class="footer__logo">
+        <img src="{{ section.settings.logo | default: 'https://cdn.shopify.com/s/files/1/0581/8882/4670/files/Secondary_Logo_Caviar_3x_499f4767-b112-4d43-aaef-79a61bddb119.png?v=1745254263' }}" alt="{{ shop.name }}" class="footer__logo-img">
+      </a>
+      <p class="footer__tagline">{{ section.settings.tagline | default: 'Contemporary, Artisanal &<br>Handcrafted Fashion' }}</p>
+      <p class="footer__origin">{{ section.settings.origin | default: 'Designed in New England<br>Handcrafted in India' }}</p>
+    </div>
+    {%- for block in section.blocks -%}
+      <div class="footer__col" {{ block.shopify_attributes }}>
+        <h4 class="footer__heading">{{ block.settings.heading }}</h4>
+        <ul>
+          {%- for link in block.settings.menu.links -%}
+            <li><a href="{{ link.url }}"{% if link.url contains 'http' and link.url contains '//' %} target="_blank" rel="noopener"{% endif %}>{{ link.title }}</a></li>
+          {%- endfor -%}
+        </ul>
+      </div>
+    {%- endfor -%}
+  </div>
+  <div class="footer__bottom">
+    <p>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}. All rights reserved.</p>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Footer logo"
+    },
+    {
+      "type": "html",
+      "id": "tagline",
+      "label": "Tagline",
+      "default": "Contemporary, Artisanal &<br>Handcrafted Fashion"
+    },
+    {
+      "type": "html",
+      "id": "origin",
+      "label": "Origin text",
+      "default": "Designed in New England<br>Handcrafted in India"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "menu_column",
+      "name": "Menu Column",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Shop"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Menu"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

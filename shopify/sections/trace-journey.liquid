@@ -1,0 +1,113 @@
+<section class="trace-journey">
+    <div class="trace-journey__header reveal">
+      <p class="section-eyebrow">{{ section.settings.eyebrow }}</p>
+      <h2 class="trace-journey__title">{{ section.settings.title }}</h2>
+      <p class="trace-journey__subtitle">{{ section.settings.subtitle }}</p>
+    </div>
+    <div class="trace-journey__steps">
+      {% for block in section.blocks %}
+      <div class="trace-journey__step reveal" {{ block.shopify_attributes }}>
+        <span class="trace-journey__step-num">{{ block.settings.step_num }}</span>
+        <h3 class="trace-journey__step-title">{{ block.settings.title }}</h3>
+        <p class="trace-journey__step-text">{{ block.settings.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "Trace Journey",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Provenance Journey"
+    },
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title",
+      "default": "Every Garment<br>Has a Story"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Each of our garments comes with a QR code that transparently shares the known history and journey of that piece. From farm, to fiber, to yarn, to fabric, to finishing & dyeing, and eventually — garment making."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "text",
+          "id": "step_num",
+          "label": "Step Number"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Trace Journey",
+      "blocks": [
+        {
+          "type": "step",
+          "settings": {
+            "step_num": "1",
+            "title": "Farm",
+            "text": "Where our raw materials are responsibly sourced — from regenerative wool farms in Uruguay to organic cotton fields in India."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "step_num": "2",
+            "title": "Fiber",
+            "text": "Natural and cellulosic fibers are processed using methods that minimize water, chemical use, and environmental harm."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "step_num": "3",
+            "title": "Yarn & Fabric",
+            "text": "Spun and woven by partner mills — from Italian houses pioneering sustainable wool to Indian handlooms with multi-generational ties to weavers."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "step_num": "4",
+            "title": "Finishing & Dyeing",
+            "text": "Finished with care using low-impact dyes and processes that respect both artisans and the environment."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "step_num": "5",
+            "title": "Garment Making",
+            "text": "Handcrafted by multi-generational artisan families in India, whose techniques — Aari embroidery, Chikankari, hand-weaving — span centuries."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

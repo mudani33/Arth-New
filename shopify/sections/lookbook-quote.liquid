@@ -1,0 +1,31 @@
+<section class="lb-quote reveal">
+    <blockquote class="lb-quote__text">
+      {{ section.settings.quote }}
+    </blockquote>
+    <cite class="lb-quote__cite">{{ section.settings.cite }}</cite>
+  </section>
+
+{% schema %}
+{
+  "name": "Lookbook Quote",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "quote",
+      "label": "Quote",
+      "default": "\u201cLuxury is not mass-produced. It is the patience of a hand that knows its thread, the weight of generations carried in a single lapel.\u201d"
+    },
+    {
+      "type": "text",
+      "id": "cite",
+      "label": "Citation",
+      "default": "Tamanna Mullen, Founder"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lookbook Quote"
+    }
+  ]
+}
+{% endschema %}

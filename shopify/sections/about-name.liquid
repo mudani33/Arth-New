@@ -1,0 +1,58 @@
+<section class="about-name">
+    <div class="about-name__inner reveal">
+      {%- for block in section.blocks -%}
+        {%- if forloop.index > 1 -%}
+          <div class="about-name__divider"></div>
+        {%- endif -%}
+        <div class="about-name__word" {{ block.shopify_attributes }}>
+          <span class="about-name__label">{{ block.settings.label }}</span>
+          <p class="about-name__meaning">{{ block.settings.meaning }}</p>
+        </div>
+      {%- endfor -%}
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "About Name",
+  "blocks": [
+    {
+      "type": "word",
+      "name": "Word",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label"
+        },
+        {
+          "type": "richtext",
+          "id": "meaning",
+          "label": "Meaning"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "About Name",
+      "blocks": [
+        {
+          "type": "word",
+          "settings": {
+            "label": "Arth",
+            "meaning": "<p>From the Sanskrit for <em>meaning<\/em> or <em>significance<\/em> — the intention behind every thread.<\/p>"
+          }
+        },
+        {
+          "type": "word",
+          "settings": {
+            "label": "Atelier",
+            "meaning": "<p>An artist's workshop — a space where things are made slowly, and by hand.<\/p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

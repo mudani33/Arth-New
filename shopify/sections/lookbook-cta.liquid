@@ -1,0 +1,44 @@
+<section class="lb-cta reveal">
+    <div class="lb-cta__inner">
+      <p class="lb-cta__eyebrow">{{ section.settings.eyebrow }}</p>
+      <h2 class="lb-cta__title">{{ section.settings.title }}</h2>
+      <a href="{{ section.settings.button_url }}" class="btn btn--primary">{{ section.settings.button_text }}</a>
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "Lookbook CTA",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Explore the Collection"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Shop the Lookbook"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "View All Pieces"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL",
+      "default": "/collections/all"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lookbook CTA"
+    }
+  ]
+}
+{% endschema %}

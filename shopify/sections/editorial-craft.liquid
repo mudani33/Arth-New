@@ -1,0 +1,82 @@
+<section class="editorial" id="craft">
+    <div class="editorial__inner editorial__inner--image-left">
+      <div class="editorial__image reveal reveal--slide-right">
+        <div class="editorial__image-frame">
+          <img src="{%- if section.settings.image != blank -%}{{ section.settings.image | image_url: width: 1200 }}{%- else -%}{{ section.settings.image_url }}{%- endif -%}" alt="{{ section.settings.image_alt }}" loading="lazy" class="editorial__img">
+        </div>
+      </div>
+      <div class="editorial__text reveal reveal--slide-left">
+        <p class="section-eyebrow">{{ section.settings.eyebrow }}</p>
+        <h2 class="editorial__title">{{ section.settings.heading }}</h2>
+        <p class="editorial__body">{{ section.settings.body_1 }}</p>
+        <p class="editorial__body">{{ section.settings.body_2 }}</p>
+        <a href="{{ section.settings.link_url }}" class="btn btn--text">{{ section.settings.link_text }}</a>
+      </div>
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "Editorial \u2014 Craft",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "image_url",
+      "label": "Image URL (fallback)",
+      "default": "https://cdn.shopify.com/s/files/1/0581/8882/4670/files/IMG_9851.heic?v=1772414174"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Image Alt Text",
+      "default": "Artisan hand-embroidering fabric"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Craft & Heritage"
+    },
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Heading (HTML allowed for line breaks)",
+      "default": "Hours of Handwork<br>in Every Lapel"
+    },
+    {
+      "type": "textarea",
+      "id": "body_1",
+      "label": "Body Paragraph 1",
+      "default": "Our artisans are fifth and sixth-generation masters of Aari embroidery and Chikankari \u2014 techniques that have been passed down through families for centuries across the communities of India. Each stitch carries the weight of cultural memory."
+    },
+    {
+      "type": "textarea",
+      "id": "body_2",
+      "label": "Body Paragraph 2",
+      "default": "At Arth Atelier, we don\u2019t just preserve these traditions. We place them at the center of contemporary fashion, creating pieces where heritage becomes a living, wearable thing."
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link Text",
+      "default": "Read Our Story \u2192"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL",
+      "default": "/pages/about"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Editorial \u2014 Craft"
+    }
+  ]
+}
+{% endschema %}

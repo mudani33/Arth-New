@@ -1,0 +1,47 @@
+<section class="trace-cta">
+    <div class="trace-cta__inner reveal">
+      <p class="section-eyebrow">{{ section.settings.eyebrow }}</p>
+      <h2 class="trace-cta__title">{{ section.settings.title }}</h2>
+      <p class="trace-cta__body">{{ section.settings.body }}</p>
+      <a href="{{ section.settings.button_url }}" class="btn btn--outline">{{ section.settings.button_text }}</a>
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "Trace CTA",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Explore Further"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "See the Journey for Yourself"
+    },
+    {
+      "type": "textarea",
+      "id": "body",
+      "label": "Body",
+      "default": "Every Arth Atelier garment includes a QR code that reveals its full provenance — scan it to trace the story from raw material to finished piece."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop the Collection"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL",
+      "default": "/collections/all"
+    }
+  ]
+}
+{% endschema %}

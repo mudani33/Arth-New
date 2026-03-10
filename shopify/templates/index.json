@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "hero": { "type": "hero-video" },
+    "press": { "type": "press-bar" },
+    "collection": { "type": "featured-collection" },
+    "editorial-craft": { "type": "editorial-craft" },
+    "quote-break": { "type": "image-break-quote" },
+    "editorial-traceability": { "type": "editorial-traceability" },
+    "pillars": { "type": "three-pillars" },
+    "custom": { "type": "custom-orders" },
+    "newsletter": { "type": "newsletter" }
+  },
+  "order": ["hero", "press", "collection", "editorial-craft", "quote-break", "editorial-traceability", "pillars", "custom", "newsletter"]
+}

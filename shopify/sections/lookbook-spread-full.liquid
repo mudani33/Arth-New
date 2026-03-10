@@ -1,0 +1,29 @@
+<section class="lb-spread lb-spread--full reveal">
+    <div class="lb-spread__image-full">
+      <img src="{{ section.settings.image | image_url: width: 3840 }}" alt="{{ section.settings.alt }}">
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "Lookbook Spread Full",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "alt",
+      "label": "Alt Text",
+      "default": "Arth Atelier lookbook — Volume I: Alibaug editorial"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lookbook Spread Full"
+    }
+  ]
+}
+{% endschema %}

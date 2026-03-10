@@ -1,0 +1,38 @@
+<section class="lb-interstitial reveal">
+    <div class="lb-interstitial__inner">
+      <p class="lb-interstitial__eyebrow">{{ section.settings.eyebrow }}</p>
+      <h2 class="lb-interstitial__title">{{ section.settings.title }}</h2>
+      <p class="lb-interstitial__text">{{ section.settings.text }}</p>
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "Lookbook Interstitial",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Alibaug, India"
+    },
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title",
+      "default": "Where Land<br>Meets Sea"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "Alibaug's coastal light and weathered architecture provided the perfect backdrop — a landscape shaped by time, much like the craft traditions that define each Arth Atelier garment. Every piece was shot in natural light, without retouching, to honor both fabric and form."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lookbook Interstitial"
+    }
+  ]
+}
+{% endschema %}

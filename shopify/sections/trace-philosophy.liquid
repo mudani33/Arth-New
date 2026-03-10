@@ -1,0 +1,30 @@
+<section class="trace-philosophy">
+    <div class="trace-philosophy__inner reveal">
+      <div class="trace-philosophy__content">
+        <p class="trace-philosophy__lead">{{ section.settings.lead }}</p>
+        <div class="trace-philosophy__divider"></div>
+        <p class="trace-philosophy__body">{{ section.settings.body }}</p>
+      </div>
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "Trace Philosophy",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "lead",
+      "label": "Lead Text",
+      "default": "While not producing any clothes would be the most sustainable thing, that narrative fails to recognize the importance the textile industry holds in serving communities, sustaining expression of art, preserving craft & culture."
+    },
+    {
+      "type": "textarea",
+      "id": "body",
+      "label": "Body Text",
+      "default": "Our view on sustainability is producing garments with the least amount of environmental, social, or animal impact — and the most amount of longevity, reusability, & recyclability. We believe in achieving that through fundamental transparency — about the fabrics we use, why we use or don't use them, about where we source from, & about how we produce."
+    }
+  ]
+}
+{% endschema %}

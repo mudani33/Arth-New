@@ -1,0 +1,26 @@
+<section class="about-prose">
+    <div class="about-prose__inner reveal">
+      <h2 class="about-prose__heading">{{ section.settings.heading }}</h2>
+      <p class="about-prose__text">{{ section.settings.paragraph }}</p>
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "About Prose East Meets West",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "East Meets West"
+    },
+    {
+      "type": "textarea",
+      "id": "paragraph",
+      "label": "Paragraph",
+      "default": "At the heart of Arth Atelier is a design ideology that merges East and West — the precision of Western tailoring met with the soul of Eastern craft. Minimalism and adornment coexist. Traditional embroidery techniques are reinterpreted on clean, contemporary silhouettes."
+    }
+  ]
+}
+{% endschema %}

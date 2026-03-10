@@ -1,0 +1,50 @@
+{
+  "sections": {
+    "hero": { "type": "about-hero" },
+    "name": {
+      "type": "about-name",
+      "blocks": {
+        "word-1": {
+          "type": "word",
+          "settings": {
+            "label": "Arth",
+            "meaning": "<p>From the Sanskrit for <em>meaning<\/em> or <em>significance<\/em> — the intention behind every thread.<\/p>"
+          }
+        },
+        "word-2": {
+          "type": "word",
+          "settings": {
+            "label": "Atelier",
+            "meaning": "<p>An artist's workshop — a space where things are made slowly, and by hand.<\/p>"
+          }
+        }
+      },
+      "block_order": ["word-1", "word-2"]
+    },
+    "prose-intro": { "type": "about-prose-intro" },
+    "image": { "type": "about-image" },
+    "east-west": { "type": "about-east-west" },
+    "artisans": { "type": "about-artisans" },
+    "links": {
+      "type": "about-links",
+      "blocks": {
+        "link-1": {
+          "type": "link",
+          "settings": {
+            "label": "Traceability &rarr;",
+            "url": "/pages/traceability"
+          }
+        },
+        "link-2": {
+          "type": "link",
+          "settings": {
+            "label": "Shop the Collection &rarr;",
+            "url": "/collections/all"
+          }
+        }
+      },
+      "block_order": ["link-1", "link-2"]
+    }
+  },
+  "order": ["hero", "name", "prose-intro", "image", "east-west", "artisans", "links"]
+}

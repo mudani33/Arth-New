@@ -1,0 +1,17 @@
+<section class="shop-header">
+    <h1 class="shop-header__title">{{ collection.title | default: section.settings.title }}</h1>
+  </section>
+
+{% schema %}
+{
+  "name": "Shop Header",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Fallback Title",
+      "default": "Shop"
+    }
+  ]
+}
+{% endschema %}

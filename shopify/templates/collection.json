@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "shop-header": { "type": "shop-header" },
+    "shop-filters": { "type": "shop-filters" },
+    "shop-grid": { "type": "shop-grid" },
+    "newsletter": { "type": "newsletter" }
+  },
+  "order": ["shop-header", "shop-filters", "shop-grid", "newsletter"]
+}

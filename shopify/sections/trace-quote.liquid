@@ -1,0 +1,29 @@
+<section class="trace-quote reveal">
+    <div class="trace-quote__inner">
+      <blockquote class="trace-quote__text">
+        <p>"{{ section.settings.quote }}"</p>
+        <cite>— {{ section.settings.cite }}</cite>
+      </blockquote>
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "Trace Quote",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "quote",
+      "label": "Quote",
+      "default": "Building a tangible, traceable journey for each of our fabric platforms has been extremely challenging but deeply rewarding."
+    },
+    {
+      "type": "text",
+      "id": "cite",
+      "label": "Citation",
+      "default": "Tamanna Mullen, Founder"
+    }
+  ]
+}
+{% endschema %}

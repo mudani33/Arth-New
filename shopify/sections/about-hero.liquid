@@ -1,0 +1,33 @@
+<section class="about-hero">
+    <div class="about-hero__inner">
+      <p class="about-hero__eyebrow">{{ section.settings.eyebrow }}</p>
+      <h1 class="about-hero__title">{{ section.settings.title }}</h1>
+      <p class="about-hero__subtitle">{{ section.settings.subtitle }}</p>
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "About Hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Our Brand"
+    },
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title",
+      "default": "Where Heritage<br>Meets the Hand"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Designed in New England. Handcrafted in India."
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,26 @@
+<section class="about-prose">
+    <div class="about-prose__inner reveal">
+      <h2 class="about-prose__heading">{{ section.settings.heading }}</h2>
+      <p class="about-prose__text">{{ section.settings.paragraph }}</p>
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "About Prose Artisans",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "The Artisans"
+    },
+    {
+      "type": "html",
+      "id": "paragraph",
+      "label": "Paragraph",
+      "default": "The <em>kaarigars</em> we work with are fifth and sixth generation masters of techniques that are both endangered and irreplaceable. We collaborate closely with small artisan clusters, building relationships based on respect — until the craft feels honored, wearable, and effortless on the body."
+    }
+  ]
+}
+{% endschema %}

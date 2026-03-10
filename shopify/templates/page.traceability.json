@@ -1,0 +1,15 @@
+{
+  "sections": {
+    "hero": { "type": "trace-hero" },
+    "philosophy": { "type": "trace-philosophy" },
+    "impact": { "type": "trace-impact" },
+    "journey": { "type": "trace-journey" },
+    "materials": { "type": "trace-materials" },
+    "quote": { "type": "trace-quote" },
+    "avoid": { "type": "trace-avoid" },
+    "banner": { "type": "trace-banner" },
+    "cta": { "type": "trace-cta" },
+    "newsletter": { "type": "newsletter" }
+  },
+  "order": ["hero", "philosophy", "impact", "journey", "materials", "quote", "avoid", "banner", "cta", "newsletter"]
+}
