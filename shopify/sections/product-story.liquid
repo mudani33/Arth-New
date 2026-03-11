@@ -1,0 +1,50 @@
+<section class="pdp-story">
+    <div class="pdp-story__inner">
+      <div class="pdp-story__text reveal">
+        <p class="section-eyebrow">{{ section.settings.eyebrow }}</p>
+        <h2 class="pdp-story__title">{{ section.settings.title }}</h2>
+        <div class="pdp-story__body">{{ section.settings.body }}</div>
+      </div>
+      {% if section.settings.image != blank %}
+      <div class="pdp-story__image reveal">
+        <img src="{{ section.settings.image | image_url: width: 900 }}" alt="{{ section.settings.image_alt }}" loading="lazy">
+      </div>
+      {% endif %}
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "Product Story",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "The Craft"
+    },
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title",
+      "default": "A Dialogue Between<br>East & West"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body",
+      "default": "<p>This piece represents a meeting of contemporary Western silhouettes and centuries-old Indian craft traditions. Each garment takes over 40 hours of meticulous handwork — a testament to the skill and dedication of our artisan partners.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Image Alt Text"
+    }
+  ]
+}
+{% endschema %}

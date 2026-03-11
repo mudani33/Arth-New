@@ -1,0 +1,153 @@
+<section class="pdp-provenance">
+    <div class="pdp-provenance__inner">
+      <div class="pdp-provenance__header reveal">
+        <p class="section-eyebrow">{{ section.settings.eyebrow }}</p>
+        <h2 class="pdp-provenance__title">{{ section.settings.title }}</h2>
+        <p class="pdp-provenance__subtitle">{{ section.settings.subtitle }}</p>
+      </div>
+
+      <div class="pdp-provenance__map">
+        <!-- Connecting line -->
+        <div class="pdp-provenance__line" aria-hidden="true">
+          <div class="pdp-provenance__line-fill"></div>
+        </div>
+
+        {% for block in section.blocks %}
+        <div class="pdp-provenance__node reveal" data-step="{{ forloop.index }}" {{ block.shopify_attributes }}>
+          <div class="pdp-provenance__node-marker">
+            <span class="pdp-provenance__node-num">{{ forloop.index }}</span>
+          </div>
+          <div class="pdp-provenance__node-content">
+            <div class="pdp-provenance__node-header">
+              <h3 class="pdp-provenance__node-title">{{ block.settings.title }}</h3>
+              {% if block.settings.location != blank %}
+              <span class="pdp-provenance__node-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                {{ block.settings.location }}
+              </span>
+              {% endif %}
+            </div>
+            <p class="pdp-provenance__node-text">{{ block.settings.text }}</p>
+            {% if block.settings.detail != blank %}
+            <p class="pdp-provenance__node-detail">{{ block.settings.detail }}</p>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="pdp-provenance__footer reveal">
+        <p class="pdp-provenance__qr-note">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM20 14v3h-3M20 20h-6M14 20v-3"/></svg>
+          Each garment includes a QR code linking to its unique provenance record
+        </p>
+      </div>
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "Product Provenance",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Provenance Journey"
+    },
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title",
+      "default": "The Journey of<br>This Garment"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Full transparency from raw material to finished piece — every step verified and traceable."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Journey Step",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "location",
+          "label": "Location"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "detail",
+          "label": "Certification/Detail"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Provenance",
+      "blocks": [
+        {
+          "type": "step",
+          "settings": {
+            "title": "Raw Material",
+            "location": "Uruguay / India",
+            "text": "Responsibly sourced fibers — regenerative wool from family farms in Uruguay or GOTS-certified organic cotton from India.",
+            "detail": "Certified: GOTS / RWS"
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Spinning & Weaving",
+            "location": "Italy / India",
+            "text": "Fibers spun into yarn and woven into fabric at partner mills committed to sustainable practices and fair labor.",
+            "detail": "OEKO-TEX Standard 100"
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Dyeing & Finishing",
+            "location": "India",
+            "text": "Low-impact dyes and finishing processes that minimize water usage and chemical runoff.",
+            "detail": "ZDHC compliant"
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Artisan Handwork",
+            "location": "Lucknow, India",
+            "text": "Hand-embroidered by multi-generational artisan families using centuries-old Aari and Chikankari techniques.",
+            "detail": "Fair Trade certified"
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Quality & Dispatch",
+            "location": "New Delhi, India",
+            "text": "Each piece undergoes rigorous quality inspection before being carefully packaged and shipped to you.",
+            "detail": ""
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

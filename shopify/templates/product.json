@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "product-gallery": { "type": "product-gallery" },
+    "product-info": { "type": "product-info" },
+    "product-provenance": { "type": "product-provenance" },
+    "product-story": { "type": "product-story" },
+    "product-recommendations": { "type": "product-recommendations" },
+    "newsletter": { "type": "newsletter" }
+  },
+  "order": ["product-gallery", "product-info", "product-provenance", "product-story", "product-recommendations", "newsletter"]
+}

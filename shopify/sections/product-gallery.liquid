@@ -1,0 +1,34 @@
+<section class="pdp-gallery">
+    <div class="pdp-gallery__thumbnails">
+      {%- for image in product.images -%}
+      <button class="pdp-gallery__thumb{% if forloop.first %} active{% endif %}" data-index="{{ forloop.index0 }}">
+        <img src="{{ image | image_url: width: 120 }}" alt="{{ image.alt | escape }}" loading="lazy">
+      </button>
+      {%- endfor -%}
+    </div>
+    <div class="pdp-gallery__main">
+      <div class="pdp-gallery__slides">
+        {%- for image in product.images -%}
+        <div class="pdp-gallery__slide{% if forloop.first %} active{% endif %}" data-index="{{ forloop.index0 }}">
+          <img src="{{ image | image_url: width: 1200 }}" alt="{{ image.alt | escape }}" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
+        </div>
+        {%- endfor -%}
+      </div>
+      <button class="pdp-gallery__nav pdp-gallery__nav--prev" aria-label="Previous image">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button class="pdp-gallery__nav pdp-gallery__nav--next" aria-label="Next image">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+      <div class="pdp-gallery__counter">
+        <span class="pdp-gallery__current">1</span> / <span class="pdp-gallery__total">{{ product.images.size }}</span>
+      </div>
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "Product Gallery",
+  "settings": []
+}
+{% endschema %}

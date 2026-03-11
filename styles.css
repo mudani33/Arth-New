@@ -831,6 +831,12 @@ input {
 }
 
 /* Product Card */
+.product-card__link-wrap {
+  display: contents;
+  color: inherit;
+  text-decoration: none;
+}
+
 .product-card {
   cursor: pointer;
 }

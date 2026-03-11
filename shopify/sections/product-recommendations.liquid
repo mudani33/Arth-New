@@ -1,0 +1,34 @@
+<section class="pdp-recs">
+    <div class="pdp-recs__inner">
+      <h2 class="pdp-recs__title">{{ section.settings.title }}</h2>
+      <div class="pdp-recs__grid">
+        {%- for product in recommendations.products limit: 4 -%}
+        <article class="pdp-recs__card reveal">
+          <a href="{{ product.url }}" class="pdp-recs__link">
+            <div class="pdp-recs__image-wrap">
+              <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.featured_image.alt | escape }}" loading="lazy">
+            </div>
+            <div class="pdp-recs__info">
+              <h3 class="pdp-recs__name">{{ product.title }}</h3>
+              <p class="pdp-recs__price">{{ product.price | money }}</p>
+            </div>
+          </a>
+        </article>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "Product Recommendations",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "You May Also Like"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,118 @@
+<section class="pdp-info">
+    <div class="pdp-info__inner">
+      <p class="pdp-info__eyebrow">{{ product.vendor }}</p>
+      <h1 class="pdp-info__title">{{ product.title }}</h1>
+      <p class="pdp-info__price">{{ product.price | money }}</p>
+
+      <div class="pdp-info__description">
+        {{ product.description }}
+      </div>
+
+      {%- form 'product', product -%}
+        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+
+        {%- if product.has_only_default_variant == false -%}
+        <div class="pdp-info__variants">
+          {%- for option in product.options_with_values -%}
+          <div class="pdp-info__option">
+            <label class="pdp-info__option-label">{{ option.name }}</label>
+            <div class="pdp-info__option-values">
+              {%- for value in option.values -%}
+              <button type="button"
+                class="pdp-size-btn{% if option.selected_value == value %} active{% endif %}"
+                data-option-index="{{ forloop.parentloop.index0 }}"
+                data-value="{{ value }}">
+                {{ value }}
+              </button>
+              {%- endfor -%}
+            </div>
+          </div>
+          {%- endfor -%}
+        </div>
+        {%- endif -%}
+
+        <button type="submit" class="pdp-info__add-btn btn btn--primary"
+          {% unless product.available %}disabled{% endunless %}>
+          {% if product.available %}
+            Add to Cart
+          {% else %}
+            Sold Out
+          {% endif %}
+        </button>
+      {%- endform -%}
+
+      <div class="pdp-info__accordion">
+        <details class="pdp-accordion" open>
+          <summary class="pdp-accordion__header">
+            <span>Materials & Craft</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="pdp-accordion__body">
+            {{ section.settings.materials_text }}
+          </div>
+        </details>
+
+        <details class="pdp-accordion">
+          <summary class="pdp-accordion__header">
+            <span>Size & Fit</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="pdp-accordion__body">
+            {{ section.settings.size_fit_text }}
+          </div>
+        </details>
+
+        <details class="pdp-accordion">
+          <summary class="pdp-accordion__header">
+            <span>Care</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="pdp-accordion__body">
+            {{ section.settings.care_text }}
+          </div>
+        </details>
+
+        <details class="pdp-accordion">
+          <summary class="pdp-accordion__header">
+            <span>Shipping & Returns</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="pdp-accordion__body">
+            {{ section.settings.shipping_text }}
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+{% schema %}
+{
+  "name": "Product Info",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "materials_text",
+      "label": "Materials & Craft",
+      "default": "<p>Each piece is hand-finished by multi-generational artisan families in India, using techniques passed down through centuries.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "size_fit_text",
+      "label": "Size & Fit",
+      "default": "<p>Available in XS–XL. This piece has a relaxed, contemporary fit. We recommend ordering your usual size.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "care_text",
+      "label": "Care",
+      "default": "<p>Dry clean recommended. Store on a padded hanger in a breathable garment bag. Avoid prolonged direct sunlight.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "shipping_text",
+      "label": "Shipping & Returns",
+      "default": "<p>Complimentary shipping on all orders. Made-to-order pieces ship within 4–6 weeks. Returns accepted within 14 days of delivery for unworn items in original condition.</p>"
+    }
+  ]
+}
+{% endschema %}
